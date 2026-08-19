@@ -16,6 +16,8 @@ export default async function ImovelPage({
   const consultorNome = imovel.dados_api?.userName;
   const consultorTelemovel = imovel.dados_api?.userCellPhone;
 
+  const corSelo = imovel.tipo === "venda" ? "bg-brand-blue" : "bg-brand-red";
+
   const detalhes = [
     imovel.tipologia && ["Tipologia", imovel.tipologia],
     imovel.area_m2 && ["Área", `${imovel.area_m2} m²`],
@@ -48,11 +50,19 @@ export default async function ImovelPage({
         </div>
       )}
 
-      <span className="text-sm font-semibold tracking-wide text-brand-blue uppercase">
-        {imovel.tipo === "venda" ? "Venda" : "Arrendamento"}
-        {imovel.tipo_imovel ? ` · ${imovel.tipo_imovel}` : ""}
-      </span>
-      <h1 className="mt-1 text-3xl font-bold">
+      <div className="flex items-center gap-2">
+        <span
+          className={`rounded-full ${corSelo} px-3 py-1 text-xs font-semibold text-white`}
+        >
+          {imovel.tipo === "venda" ? "Venda" : "Arrendamento"}
+        </span>
+        {imovel.tipo_imovel && (
+          <span className="text-sm font-semibold tracking-wide text-foreground-secondary uppercase">
+            {imovel.tipo_imovel}
+          </span>
+        )}
+      </div>
+      <h1 className="mt-3 text-3xl font-bold">
         {formatarPreco(imovel.preco_pedido)}
       </h1>
       <p className="mt-1 text-foreground-secondary">

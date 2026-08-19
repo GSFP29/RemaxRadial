@@ -160,7 +160,9 @@ export function mapListingParaImovel(
     area_m2: listing.livingArea ?? listing.totalArea ?? null,
     ano_construcao: extrairAnoConstrucao(listing.constructionYear),
     quartos,
-    casas_banho: listing.numberOfWC ?? listing.numberOfBathrooms ?? null,
+    // numberOfBathrooms é o campo fiável; numberOfWC costuma vir "0" mesmo
+    // quando há casas de banho reais — nunca usar como prioridade sobre ele.
+    casas_banho: listing.numberOfBathrooms ?? listing.numberOfWC ?? null,
     certificado_energetico: listing.energeticSpecification ?? null,
     data_angariacao: listing.contractDate ?? null,
     dados_api: listing,

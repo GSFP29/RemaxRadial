@@ -32,7 +32,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Modo escuro selecionado, não invertido — ver docs/decisoes.md */
+/* Modo escuro selecionado, não invertido — ver docs/decisoes.md.
+   Aplica-se ao painel interno. O site público mantém-se sempre branco
+   (pedido explícito do cliente, Ago 2026 — ".site-publico" repõe os
+   valores claros mesmo com o sistema em modo escuro). */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1a1a19;
@@ -46,6 +49,15 @@
     --chart-2: #d95926;
     --chart-3: #199e70;
     --chart-4: #c98500;
+  }
+
+  .site-publico {
+    --background: #ffffff;
+    --foreground: #0b0b0b;
+    --foreground-secondary: #52514e;
+    --grid: #e1e0d9;
+    --brand-red: #c8102e;
+    --brand-blue: #0033a0;
   }
 }
 
