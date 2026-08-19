@@ -1,0 +1,94 @@
+ref,estado,status,bt,preco,precoAnterior,tipo,tipologia,concelho,freguesia,consultor,contrato,idade,dias,modificado
+121161005-253,Vendido,4,1,249000,,Apartamento,T2,Amadora,Águas Livres,Paulo Pimpão,2026-05-12,97,76,2026-07-27
+121161058-1011,Em mercado,1,2,2750,2950,Loja,,Loures,Loures,Daniel Santa,2025-05-20,454,409,2026-06-22
+121161058-1024,Em mercado,1,1,385000,395000,Apartamento,T4,Lisboa,Santa Clara,Daniel Santa,2025-12-04,256,211,2026-06-23
+121161058-1025,Em mercado,1,2,1850,,Apartamento,T3,Lisboa,Estrela,Daniel Santa,2025-12-12,248,202,2026-06-08
+121161058-1031,Em mercado,1,1,225000,225500,Terreno,,Loures,Santo António dos Cavaleiros e Frielas,Daniel Santa,2026-04-27,112,93,2026-07-29
+121161058-1032,Em mercado,1,1,235000,,Terreno,,Loures,Santo António dos Cavaleiros e Frielas,Daniel Santa,2026-04-27,112,66,2026-04-29
+121161058-1035,Em mercado,1,1,240000,,Armazém,,Sintra,Queluz e Belas,Daniel Santa,2026-06-16,62,17,2026-06-16
+121161058-1036,Em mercado,1,1,269000,,Apartamento,T2,Odivelas,Odivelas,Daniel Santa,2026-07-27,21,8,2026-08-04
+121161058-1037,Em mercado,1,1,749000,,Moradia,T3,Loures,Loures,Daniel Santa,2026-07-27,21,11,2026-08-07
+121161058-1038,Em mercado,1,1,799500,,Armazém,,Vila Franca de Xira,Vialonga,Daniel Santa,2026-07-28,20,7,2026-08-04
+121161058-1039,Em mercado,1,1,322500,,Apartamento,T2,Sintra,Algueirão-Mem Martins,Daniel Santa,2026-07-28,20,9,2026-08-07
+121161058-1040,Em mercado,1,1,525000,,Apartamento,T3,Sintra,Algueirão-Mem Martins,Daniel Santa,2026-07-31,17,7,2026-08-07
+121161058-1041,Em mercado,1,1,449500,,Apartamento,T3,Loures,Loures,Daniel Santa,2026-08-04,13,3,2026-08-07
+121161058-995,Em mercado,1,1,795000,955000,Terreno,,Palmela,Quinta do Anjo,Daniel Santa,2024-05-17,822,787,2026-07-13
+121161065-97,Reservado,2,1,265000,,Apartamento,T2,Odivelas,Ramada e Caneças,Pinto Lopes,2026-08-07,10,7,2026-08-14
+121161094-100,Em mercado,1,1,50500,,Terreno,,Tomar,Serra e Junceira,Telmo Gomes,2023-03-14,1252,1229,2026-08-09
+121161094-120,Em mercado,1,1,615000,612000,Moradia,T3,Odivelas,Ramada e Caneças,Telmo Gomes,2026-01-07,222,202,2026-07-28
+121161094-121,Reservado,2,2,1100,1090,Apartamento,T2,Loures,Moscavide e Portela,Telmo Gomes,2026-01-15,214,198,2026-08-01
+121161094-122,Em mercado,1,1,325000,,Apartamento,T2,Odivelas,Póvoa de Santo Adrião e Olival Basto,Telmo Gomes,2026-02-19,179,133,2026-03-12
+121161094-124,Arrendado,6,2,1000,,Loja,,Odivelas,Odivelas,Telmo Gomes,2026-07-28,20,16,2026-08-13
+121161094-99,Em mercado,1,1,12000,,Terreno,,Tomar,Serra e Junceira,Telmo Gomes,2023-03-14,1252,1219,2026-07-30
+121161097-140,Em mercado,1,1,59500,,Terreno,,Tomar,Casais e Alviobeira,Nuno Cruz,2024-10-31,655,609,2026-05-12
+121161097-148,Em mercado,1,1,820000,,Moradia,T6,Tomar,Tomar (São João Baptista) e Santa Maria dos Olivais,Nuno Cruz,2025-12-18,242,195,2026-06-15
+121161097-149,Em mercado,1,1,150000,175000,Loja,,Odivelas,Odivelas,Nuno Cruz,2026-05-04,105,87,2026-07-30
+121161097-150,Em mercado,1,1,305000,,Apartamento,T2,Odivelas,Odivelas,Nuno Cruz,2026-07-09,39,4,2026-07-14
+121161104-1555,Em mercado,1,1,850000,750000,Loja,,Arruda dos Vinhos,Arruda dos Vinhos,Natércia Ferreira,2024-08-23,724,678,2026-04-13
+121161108-285,Em mercado,1,1,439900,439000,Apartamento,T3,Lisboa,Olivais,José Marta,2026-04-25,114,81,2026-07-24
+121161108-286,Em mercado,1,1,395000,380000,Moradia,T4,Loures,Loures,José Marta,2026-05-05,104,90,2026-08-03
+121161108-287,Em mercado,1,2,1550,1500,Apartamento,T3,Lisboa,Campo de Ourique,José Marta,2026-06-18,60,51,2026-08-09
+121161108-288,Em mercado,1,1,180000,,Terreno,,Palmela,Quinta do Anjo,José Marta,2026-07-04,44,33,2026-08-06
+121161108-289,Em mercado,1,2,7500,,Apartamento (Luxo),T4,Lisboa,Arroios,José Marta,2026-07-10,38,9,2026-07-20
+121161108-290,Arrendado,6,2,1500,,Apartamento,T5,Amadora,Venteira,José Marta,2026-07-27,21,9,2026-08-05
+121161119-65,Em mercado,1,2,3250,3500,Apartamento,T2,Lisboa,Avenidas Novas,Helena Silva,2026-03-13,157,119,2026-07-24
+121161124-16,Em mercado,1,1,1150000,,Moradia,T5,Odivelas,Pontinha e Famões,Isabel Santos,2025-06-12,431,238,2026-06-08
+121161124-17,Em mercado,1,1,205000,,Apartamento,T3,Covilhã,Covilhã e Canhoso,Isabel Santos,2026-03-12,158,111,2026-05-19
+121161124-18,Em mercado,1,1,375000,,Apartamento,T4,Grândola,Grândola e Santa Margarida da Serra,Isabel Santos,2026-05-26,83,62,2026-07-27
+121161126-42,Em mercado,1,1,59000,,Terreno,,Lourinhã,Vimeiro,Conceição Vieira,2025-06-05,438,385,2026-05-27
+121161126-44,Em mercado,1,1,56500,,Terreno,,Lourinhã,Vimeiro,Conceição Vieira,2025-06-12,431,385,2026-06-08
+121161126-46,Em mercado,1,1,397000,,Moradia,T3,Cadaval,Lamas e Cercal,Conceição Vieira,2026-08-06,11,0,2026-08-06
+121161132-43,Em mercado,1,1,699900,,Moradia,T4,Setúbal,Azeitão (São Lourenço e São Simão),Carminda Batista,2026-04-21,118,94,2026-07-24
+121161132-45,Em mercado,1,1,200000,,Terreno,,Odivelas,Ramada e Caneças,Carminda Batista,2026-05-25,84,38,2026-07-02
+121161132-46,Em mercado,1,1,200000,,Terreno,,Odivelas,Ramada e Caneças,Carminda Batista,2026-05-25,84,38,2026-07-02
+121161132-47,Em mercado,1,2,1500,,Apartamento,T3,Lisboa,Lumiar,Carminda Batista,2026-08-07,10,0,2026-08-07
+121161134-185,Em mercado,1,1,790000,,Terreno,,Loures,"Santa Iria de Azoia, São João da Talha e Bobadela",Miguel de Souza Barriga,2025-06-03,440,413,2026-07-21
+121161134-191,Em mercado,1,1,1150000,,Apartamento,T3,Lisboa,Avenidas Novas,Miguel de Souza Barriga,2026-01-05,224,57,2026-07-10
+121161134-192,Em mercado,1,1,425000,,Loja,,Amadora,Águas Livres,Miguel de Souza Barriga,2026-08-11,6,3,2026-08-14
+121161139-114,Em mercado,1,1,190000,185000,Moradia,T0,Seixal,"Seixal, Arrentela e Aldeia de Paio Pires",Nelson Timóteo,2021-07-17,1857,1837,2026-07-30
+121161139-124,Em mercado,1,1,62000,,Terreno,,Mafra,"Enxara do Bispo, Gradil e Vila Franca do Rosário",Nelson Timóteo,2021-09-15,1797,1751,2026-05-29
+121161139-190,Em mercado,1,2,2250,,Armazém,,Loures,"Camarate, Unhos e Apelação",Nelson Timóteo,2022-10-03,1414,1396,2026-07-30
+121161139-2,Em mercado,1,1,35000,35000,Terreno,,Mafra,"Enxara do Bispo, Gradil e Vila Franca do Rosário",Nelson Timóteo,2018-08-22,2917,2871,2026-05-27
+121161139-262,Vendido,4,1,42000,47000,Moradia,T1,Ferreira do Zêzere,Areias e Pias,Nelson Timóteo,2024-08-26,721,710,2026-08-06
+121161139-269,Em mercado,1,1,465000,450000,Duplex,T3,Almada,Costa de Caparica,Nelson Timóteo,2024-10-09,677,631,2026-06-02
+121161139-274,Em mercado,1,1,375000,365000,Apartamento,T4,Almada,Laranjeiro e Feijó,Nelson Timóteo,2024-10-11,675,605,2026-06-23
+121161139-276,Em mercado,1,1,1250000,1050000,Prédio,,Lisboa,Alcântara,Nelson Timóteo,2024-11-22,633,615,2026-07-30
+121161139-278,Em mercado,1,1,700000,625000,Moradia,T6,Sintra,Rio de Mouro,Nelson Timóteo,2025-01-06,588,570,2026-07-30
+121161139-286,Em mercado,1,1,445000,430000,Moradia,T5,Seixal,Amora,Nelson Timóteo,2025-03-10,525,479,2026-04-22
+121161139-298,Em mercado,1,1,575000,,Moradia,T4,Mafra,Santo Isidoro,Nelson Timóteo,2025-06-06,437,391,2026-06-08
+121161139-302,Em mercado,1,1,225000,215000,Apartamento,T2,Vila Franca de Xira,Vila Franca de Xira,Nelson Timóteo,2025-06-26,417,410,2026-08-10
+121161139-309,Em mercado,1,1,475000,455000,Apartamento,T5,Alcochete,São Francisco,Nelson Timóteo,2025-09-03,348,302,2026-03-17
+121161139-320,Em mercado,1,1,345000,330000,Apartamento,T2,Almada,"Almada, Cova da Piedade, Pragal e Cacilhas",Nelson Timóteo,2025-10-01,320,282,2026-07-10
+121161139-324,Em mercado,1,1,346000,326000,Apartamento,T4,Moita,Gaio-Rosário e Sarilhos Pequenos,Nelson Timóteo,2025-11-08,282,261,2026-07-30
+121161139-328,Em mercado,1,1,250000,,Loja,,Moita,Gaio-Rosário e Sarilhos Pequenos,Nelson Timóteo,2025-12-15,245,227,2026-07-30
+121161139-336,Em mercado,1,1,230000,220000,Moradia,T2,Vila Franca de Xira,Vialonga,Nelson Timóteo,2026-01-22,207,161,2026-03-18
+121161139-339,Em mercado,1,1,275000,,Apartamento,T3,Alenquer,Carregado e Cadafais,Nelson Timóteo,2026-03-04,166,120,2026-03-12
+121161139-341,Em mercado,1,1,455000,435000,Prédio,,Arruda dos Vinhos,Arruda dos Vinhos,Nelson Timóteo,2026-03-13,157,119,2026-07-10
+121161139-342,Em mercado,1,1,345000,335000,Apartamento,T2,Almada,Laranjeiro e Feijó,Nelson Timóteo,2026-03-13,157,119,2026-07-10
+121161139-343,Em mercado,1,1,399000,,Apartamento,T2,Vila Franca de Xira,Vila Franca de Xira,Nelson Timóteo,2026-03-13,157,111,2026-03-17
+121161139-349,Em mercado,1,1,329500,,Apartamento,T2,Lisboa,Santa Clara,Nelson Timóteo,2026-05-08,101,55,2026-05-08
+121161139-350,Em mercado,1,1,315000,285000,Escritório,,Almada,Laranjeiro e Feijó,Nelson Timóteo,2026-05-25,84,38,2026-06-15
+121161139-351,Em mercado,1,1,199000,,Trespasse,,Sintra,Cacém e São Marcos,Nelson Timóteo,2026-06-11,67,22,2026-07-02
+121161139-353,Reservado,2,2,620,,Loja,,Odivelas,Ramada e Caneças,Nelson Timóteo,2026-06-24,54,51,2026-08-14
+121161139-354,Em mercado,1,1,104000,,Loja,,Odivelas,Ramada e Caneças,Nelson Timóteo,2026-06-24,54,9,2026-06-24
+121161139-356,Em mercado,1,2,1150,,Armazém,,Loures,"Camarate, Unhos e Apelação",Nelson Timóteo,2026-06-25,53,32,2026-07-27
+121161139-358,Arrendado,6,2,950,,Armazém,,Loures,"Camarate, Unhos e Apelação",Nelson Timóteo,2026-06-26,52,33,2026-07-29
+121161139-359,Em mercado,1,2,400,,Armazém,,Loures,"Camarate, Unhos e Apelação",Nelson Timóteo,2026-06-26,52,3,2026-06-29
+121161139-360,Em mercado,1,1,275000,,Apartamento,T2,Setúbal,São Sebastião,Nelson Timóteo,2026-07-28,20,0,2026-07-28
+121161139-361,Em mercado,1,2,1700,,Armazém,,Loures,Lousa,Nelson Timóteo,2026-07-29,19,2,2026-07-31
+121161139-363,Em mercado,1,1,455000,,Moradia,T3,Sintra,"Almargem do Bispo, Pêro Pinheiro e Montelavar",Nelson Timóteo,2026-08-07,10,1,2026-08-08
+121161139-52,Em mercado,1,1,25000,,Terreno,,Mafra,"Enxara do Bispo, Gradil e Vila Franca do Rosário",Nelson Timóteo,2020-06-03,2266,2220,2026-05-27
+121161162-32,Em mercado,1,1,335000,,Apartamento,T2,Odivelas,Odivelas,Adriana Rebelo,2026-08-14,3,0,2026-08-14
+121161181-3,Em mercado,1,1,150000,,Terreno,,Odemira,Vale de Santiago,Diogo Costa,2025-09-16,335,308,2026-07-21
+121161189-55,Em mercado,1,1,1400000,1390000,Prédio,,Lisboa,Misericórdia,Susana Aleixo,2026-02-05,193,148,2026-07-31
+121161189-59,Em mercado,1,2,550,600,Outros - Comercial,,Loures,Loures,Susana Aleixo,2026-04-22,117,89,2026-07-20
+121161189-64,Em mercado,1,2,650,,Loja,,Loures,Loures,Susana Aleixo,2026-07-07,41,13,2026-07-20
+121161193-17,Em mercado,1,1,359000,,Apartamento,T2,Odivelas,Odivelas,Jacinta da Silva,2026-05-05,104,64,2026-07-08
+121161193-18,Em mercado,1,1,299000,,Apartamento,T1,Odivelas,Odivelas,Jacinta da Silva,2026-06-15,63,17,2026-07-02
+121161194-20,Em mercado,1,1,285000,349000,Armazém,,Sobral de Monte Agraço,Sobral de Monte Agraço,Vitor Pimpão,2024-11-21,634,616,2026-07-30
+121161194-28,Em mercado,1,1,729000,,Prédio,,Odivelas,Ramada e Caneças,Vitor Pimpão,2026-04-08,131,85,2026-06-03
+121161195-17,Vendido,4,1,320000,,Apartamento,T3,Odivelas,Odivelas,Jorge Valente,2026-03-30,140,62,2026-07-28
+121161195-18,Em mercado,1,1,381000,,Apartamento,T2,Odivelas,Odivelas,Jorge Valente,2026-08-03,14,1,2026-08-04
+121161195-4,Em mercado,1,1,599000,,Moradia,T7,Loures,Bucelas,Jorge Valente,2022-11-25,1361,1161,2026-07-30
+121161202-1,Em mercado,1,1,170000,,Apartamento,T2,Guarda,Guarda,Isabel Alves,2026-05-11,98,52,2026-05-20
+121161202-2,Em mercado,1,1,560000,,Moradia,T5,Alenquer,Alenquer (Santo Estêvão e Triana),Isabel Alves,2026-05-11,98,51,2026-05-19

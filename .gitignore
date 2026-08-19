@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+/.pnp
+.pnp.*
+
+# env
+.env
+.env*.local
+.dev.vars
+
+# cloudflare
+.wrangler/
+.open-next/
+.vercel
+
+# next.js
+.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# build
+dist/
+/build
+/coverage
+
+# misc
+.DS_Store
+*.pem
+*.log
+npm-debug.log*
