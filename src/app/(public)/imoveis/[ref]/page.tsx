@@ -2,11 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   formatarPreco,
-  imagemUrl,
   obterImovelPorRef,
   urlAnuncioRemax,
 } from "@/lib/imoveis";
 import { LocalizacaoImovel } from "@/components/localizacao-imovel";
+import { GaleriaFotos } from "@/components/galeria-fotos";
 
 export default async function ImovelPage({
   params,
@@ -42,19 +42,7 @@ export default async function ImovelPage({
         ← Voltar aos imóveis
       </Link>
 
-      {fotos.length > 0 && (
-        <div className="mb-6 grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {fotos.slice(0, 8).map((foto) => (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              key={foto}
-              src={imagemUrl(foto, "ds-l")}
-              alt=""
-              className="aspect-[4/3] w-full rounded-md object-cover"
-            />
-          ))}
-        </div>
-      )}
+      <GaleriaFotos fotos={fotos} />
 
       <div className="flex items-center gap-2">
         <span
