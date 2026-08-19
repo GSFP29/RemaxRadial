@@ -60,7 +60,9 @@ A chamada **tem de partir de um contexto com origem `remax.pt`** ou de um servid
 | `isExclusive` | Angariação em exclusivo. |
 | `zipCode`, `address`, `publicAddress` | Morada. `publicAddress` diz se pode ser mostrada. |
 
-> Há um campo truncado na leitura original que parece ser o ano de construção. **Confirmar** antes de o prometer na ferramenta de pesquisa.
+> **Confirmado (Ago 2026):** o ano de construção é `constructionYear`. Tem dados sujos nalguns registos (ex. `"803"` num imóvel em Lisboa) — a ingestão só aceita valores entre 1800 e o ano atual+2, o resto fica `null` em vez de mostrar lixo.
+
+> **`tipo_imovel`** (apartamento, moradia, loja, terreno, armazém...) também não vem num campo próprio documentado pela API — mas `descriptionTags` segue sempre o padrão `{venda|arrendamento}-{tipo}-{tipologia}-{concelho}-{freguesia}`, e o segundo troço dá-nos o tipo de imóvel de forma fiável.
 
 ---
 

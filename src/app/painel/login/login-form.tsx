@@ -53,7 +53,7 @@ export function LoginForm() {
         autoComplete="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="mb-4 w-full rounded-md border border-grid bg-transparent px-3 py-2 text-sm outline-none focus:border-navy"
+        className="mb-4 w-full rounded-md border border-grid bg-transparent px-3 py-2 text-sm outline-none focus:border-brand-blue"
       />
 
       <label className="mb-1 block text-sm font-medium" htmlFor="password">
@@ -66,11 +66,11 @@ export function LoginForm() {
         autoComplete="current-password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        className="mb-4 w-full rounded-md border border-grid bg-transparent px-3 py-2 text-sm outline-none focus:border-navy"
+        className="mb-4 w-full rounded-md border border-grid bg-transparent px-3 py-2 text-sm outline-none focus:border-brand-blue"
       />
 
       {error && (
-        <p className="mb-4 text-sm text-chart-2" role="alert">
+        <p className="mb-4 text-sm text-brand-red" role="alert">
           {error}
         </p>
       )}
@@ -78,7 +78,7 @@ export function LoginForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full rounded-md bg-navy px-3 py-2 text-sm font-semibold text-white disabled:opacity-60"
+        className="w-full rounded-md bg-brand-red px-3 py-2 text-sm font-semibold text-white disabled:opacity-60"
       >
         {loading ? "A entrar…" : "Entrar"}
       </button>
