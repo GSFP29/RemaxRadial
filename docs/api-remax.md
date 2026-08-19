@@ -33,7 +33,7 @@ Devolve **93 registos** (87 ativos/reservados + 6 fechados recentemente).
 
 ### CORS
 
-A chamada **tem de partir de um contexto com origem `remax.pt`** ou de um servidor. Do browser, a partir de `radial.pt`, é bloqueada pela política de origem cruzada. Em produção: chamar a partir de um Worker/rota de servidor, com cache.
+A chamada **tem de partir de um contexto com origem `remax.pt`** ou de um servidor. Do browser, a partir de `remaxradial.pt`, é bloqueada pela política de origem cruzada. Em produção: chamar a partir de um Worker/rota de servidor, com cache.
 
 ---
 

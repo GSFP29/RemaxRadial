@@ -24,9 +24,9 @@ Carteira atual (Ago 2026): **87 angariações ativas** — 73 venda, 14 arrendam
 | Consultor | login | os seus imóveis e leads, os dos colegas em leitura, ferramenta de pesquisa de mercado |
 | Administrador | login | tudo o acima + funis, métricas, gestão de utilizadores, marketing |
 
-**Regra crítica:** o cliente final **nunca** vê um botão de login, nem modo convidado, nem nada. O site público é um site normal. A área privada vive em rotas próprias (`/painel` ou subdomínio `painel.radial.pt`).
+**Regra crítica:** o cliente final **nunca** vê um botão de login, nem modo convidado, nem nada. O site público é um site normal. A área privada vive em rotas próprias (`/painel` ou subdomínio `painel.remaxradial.pt`).
 
-Domínio **radial.pt** — a agência controla-o. O site atual é um template PHP da rede RE/MAX e vai ser substituído.
+Domínio **remaxradial.pt** — a agência controla-o. O site atual é um template PHP da rede RE/MAX e vai ser substituído.
 
 ---
 

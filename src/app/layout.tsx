@@ -18,7 +18,11 @@ export const metadata: Metadata = {
     "RE/MAX Radial, agência 12116 em Odivelas. Compra, venda e arrendamento de imóveis.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="pt"
