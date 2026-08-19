@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { formatarPreco, imagemUrl, obterImovelPorRef } from "@/lib/imoveis";
+import {
+  formatarPreco,
+  imagemUrl,
+  obterImovelPorRef,
+  urlAnuncioRemax,
+} from "@/lib/imoveis";
+import { LocalizacaoImovel } from "@/components/localizacao-imovel";
 
 export default async function ImovelPage({
   params,
@@ -62,14 +68,21 @@ export default async function ImovelPage({
           </span>
         )}
       </div>
-      <h1 className="mt-3 text-3xl font-bold">
-        {formatarPreco(imovel.preco_pedido)}
-      </h1>
-      <p className="mt-1 text-foreground-secondary">
-        {[imovel.morada, imovel.freguesia, imovel.concelho]
-          .filter(Boolean)
-          .join(", ")}
-      </p>
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h1 className="mt-3 text-3xl font-bold">
+          {formatarPreco(imovel.preco_pedido)}
+        </h1>
+        <a
+          href={urlAnuncioRemax(imovel)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-semibold text-brand-blue"
+        >
+          Ver anúncio no site RE/MAX →
+        </a>
+      </div>
+
+      <LocalizacaoImovel imovel={imovel} />
 
       {detalhes.length > 0 && (
         <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-grid pt-8 sm:grid-cols-3">

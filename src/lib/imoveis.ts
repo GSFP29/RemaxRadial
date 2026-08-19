@@ -23,15 +23,35 @@ export type ImovelPublico = {
   quartos: number | null;
   casas_banho: number | null;
   certificado_energetico: string | null;
+  latitude: number | null;
+  longitude: number | null;
   dados_api: {
     listingPictures?: string[];
     userName?: string;
     userCellPhone?: string;
+    regionSearch2?: string;
+    regionSearch3?: string;
   } | null;
 };
 
+// Ver docs/api-remax.md, secção "URLs dos anúncios" — o portal resolve
+// pela referência, o slug é só cosmético, mas vale a pena gerá-lo bem.
+export function urlAnuncioRemax(imovel: ImovelPublico): string {
+  const tipologiaSlug = imovel.tipologia
+    ? imovel.tipologia.toLowerCase()
+    : "imovel";
+  const tipoImovelSlug = imovel.tipo_imovel ?? "imovel";
+  const zona2 = imovel.dados_api?.regionSearch2 ?? "portugal";
+  const zona3 = imovel.dados_api?.regionSearch3 ?? "";
+  const slug = [imovel.tipo, tipoImovelSlug, tipologiaSlug, zona2, zona3]
+    .filter(Boolean)
+    .join("-");
+
+  return `https://www.remax.pt/pt/imoveis/${slug}/${imovel.ref_remax}`;
+}
+
 const CAMPOS_PUBLICOS =
-  "id, ref_remax, tipo, tipo_imovel, preco_pedido, morada, freguesia, concelho, tipologia, area_m2, ano_construcao, quartos, casas_banho, certificado_energetico, dados_api";
+  "id, ref_remax, tipo, tipo_imovel, preco_pedido, morada, freguesia, concelho, tipologia, area_m2, ano_construcao, quartos, casas_banho, certificado_energetico, latitude, longitude, dados_api";
 
 export type FiltrosImoveis = {
   tipologia?: string;

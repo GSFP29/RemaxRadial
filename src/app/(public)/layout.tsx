@@ -6,7 +6,7 @@ export default function PublicLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="site-publico flex min-h-full flex-1 flex-col bg-background text-foreground">
+    <div className="flex min-h-full flex-1 flex-col">
       {/* Barra de destaque com as cores da marca — sempre presente, discreta */}
       <div className="flex h-1.5">
         <div className="flex-1 bg-brand-red" />

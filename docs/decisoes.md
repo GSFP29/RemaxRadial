@@ -93,8 +93,8 @@ Consequência prática: extração **assistida** (o utilizador entra, nós extra
 ## Design
 
 - **Cores institucionais (Ago 2026, atualizado a pedido do cliente):** seguem o color building system da RE/MAX — branco como cor principal, vermelho e azul como apontamentos, cores sólidas (não gradientes). Valores confirmados a partir do logótipo real da agência: vermelho `#c8102e`, azul `#0033a0`. A decisão anterior de navy `#003a6b` como cor institucional única fica revogada.
-- Séries de gráficos, modo claro: `#2a78d6` `#eb6834` `#1baf7a` `#eda100` — ordem fixa, nunca ciclada, validada para daltonismo. Ficam à parte da identidade de marca por serem uma decisão de acessibilidade, não estética.
-- Modo escuro **selecionado**, não invertido. Superfície `#1a1a19`, texto `#ededed`, secundário `#a8a7a2`, grelha `#33322f`. Apontamentos ajustados para contraste: vermelho `#ff4d5e`, azul `#4d8fff`. Gráficos: `#3987e5` `#d95926` `#199e70` `#c98500`.
+- Séries de gráficos: `#2a78d6` `#eb6834` `#1baf7a` `#eda100` — ordem fixa, nunca ciclada, validada para daltonismo. Ficam à parte da identidade de marca por serem uma decisão de acessibilidade, não estética.
+- **Modo escuro removido (Ago 2026).** O cliente pediu explicitamente modo claro forçado em todo o site — "fica mais profissional". Isto revoga a decisão anterior ("modo escuro selecionado, não invertido") registada mais abaixo por referência histórica. Não construir nenhuma alternativa escura, nem no site público nem no painel interno, a menos que o cliente peça de volta.
 - Superfície clara `#ffffff`, texto `#0b0b0b`, secundário `#52514e`, grelha `#e1e0d9`.
 - Nunca gráficos de dois eixos verticais.
 - Cada métrica aparece ao lado da sua referência histórica.

@@ -164,6 +164,7 @@ Estes ficheiros são o protótipo do que a aplicação vai substituir. As métri
 
 - **Idioma:** pt-PT em tudo o que o utilizador vê. Código e nomes de variáveis em inglês.
 - **Moeda:** `Intl.NumberFormat('pt-PT', {style:'currency', currency:'EUR', useGrouping:'always'})`
-- **Cores institucionais:** seguem o color building system da rede RE/MAX — branco como base, vermelho `#c8102e` e azul `#0033a0` como apontamentos (confirmado a partir do logótipo real da agência, Ago 2026). Cores sólidas, não gradientes. Séries de gráficos mantêm-se à parte, por acessibilidade: `#2a78d6`, `#eb6834`, `#1baf7a`, `#eda100` (validadas para daltonismo). Modo escuro é obrigatório e tem os seus próprios tons — ver `docs/decisoes.md`.
+- **Cores institucionais:** seguem o color building system da rede RE/MAX — branco como base, vermelho `#c8102e` e azul `#0033a0` como apontamentos (confirmado a partir do logótipo real da agência, Ago 2026). Cores sólidas, não gradientes. Séries de gráficos mantêm-se à parte, por acessibilidade: `#2a78d6`, `#eb6834`, `#1baf7a`, `#eda100` (validadas para daltonismo).
+- **Modo claro forçado, sem exceções** (Ago 2026, decisão do cliente: "fica mais profissional"). **Revoga** a decisão anterior de modo escuro obrigatório — não construir alternativa escura em nenhuma área, incluindo o painel interno.
 - **Datas** em ISO na base de dados, `dd/mm/aaaa` no ecrã.
 - **Nunca** usar localStorage para dados de negócio — só base de dados.

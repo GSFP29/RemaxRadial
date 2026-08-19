@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  /* Branco como base, vermelho e azul como apontamentos — cor building
-     system da RE/MAX. Confirmado a partir do logótipo real da agência
-     (balão RE/MAX + "RADIAL"), Ago 2026. */
+  /* Modo claro forçado em todo o site — decisão explícita do cliente
+     (Ago 2026): "fica mais profissional". Sem alternativa escura,
+     em nenhuma área da aplicação. Ver docs/decisoes.md. */
   --background: #ffffff;
   --foreground: #0b0b0b;
   --foreground-secondary: #52514e;
@@ -32,36 +32,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Modo escuro selecionado, não invertido — ver docs/decisoes.md.
-   Aplica-se ao painel interno. O site público mantém-se sempre branco
-   (pedido explícito do cliente, Ago 2026 — ".site-publico" repõe os
-   valores claros mesmo com o sistema em modo escuro). */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1a19;
-    --foreground: #ededed;
-    --foreground-secondary: #a8a7a2;
-    --grid: #33322f;
-    --brand-red: #ff4d5e;
-    --brand-blue: #4d8fff;
-
-    --chart-1: #3987e5;
-    --chart-2: #d95926;
-    --chart-3: #199e70;
-    --chart-4: #c98500;
-  }
-
-  .site-publico {
-    --background: #ffffff;
-    --foreground: #0b0b0b;
-    --foreground-secondary: #52514e;
-    --grid: #e1e0d9;
-    --brand-red: #c8102e;
-    --brand-blue: #0033a0;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
+  color-scheme: light;
 }
