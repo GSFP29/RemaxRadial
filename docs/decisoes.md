@@ -134,5 +134,6 @@ Pedidos pelo cliente e registados no `CLAUDE.md`, secção 9:
 
 - **Contactos de parceiros** — gráficas, solicitadores, advogados, notários, certificação energética, fotografia, arquitetos, intermediários de crédito, limpezas, mudanças, obras. Por categoria, com condições negociadas. Mantido pelo administrador. É barato de construir e dos que mais tempo poupa.
 - **Marcação de salas de reunião** — calendário partilhado com reserva por consultor, hora e cliente associado.
+- **Calendário de Escalas** (pedido em 19 Ago 2026) — calendário do mês a mostrar que consultor está de escala / tem de ficar no escritório em cada dia. Por construir — a fazer a seguir.
 
 A estrutura de separadores deve permitir acrescentar outros sem refazer a navegação — vão surgir mais.

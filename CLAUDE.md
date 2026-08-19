@@ -131,6 +131,8 @@ Fontes, por ordem: rede RE/MAX (45k imóveis, já acessível, e partilha dentro 
 
 **Marcação de salas de reunião** — calendário partilhado das salas da agência, com reserva por consultor, hora e cliente associado. Evita a conversa de corredor e o duplo agendamento.
 
+**Calendário de Escalas** — quem está de escala / tem de ficar no escritório a cada dia do mês, visível a todos os consultores. Pedido pelo cliente em 19 Ago 2026, por construir.
+
 Outros separadores a acrescentar conforme forem surgindo — a estrutura deve permitir isso sem refazer nada.
 
 ---
