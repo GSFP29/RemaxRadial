@@ -15,7 +15,7 @@ export type RemaxListing = {
   businessTypeID: number;
   listingPrice: number | null;
   address: string | null;
-  publicAddress: string | null;
+  publicAddress: boolean | null; // indica se `address` pode ser mostrada, não é a morada
   regionName2: string | null; // concelho
   regionName3: string | null; // freguesia
   latitude: number | null;
@@ -151,7 +151,7 @@ export function mapListingParaImovel(
     tipo_imovel: extrairTipoImovel(listing.descriptionTags),
     estado: ESTADO_POR_STATUS_ID[listing.listingStatusID] ?? "desconhecido",
     preco_pedido: listing.listingPrice ?? null,
-    morada: listing.publicAddress ?? listing.address ?? null,
+    morada: listing.publicAddress === true ? (listing.address ?? null) : null,
     freguesia: listing.regionName3 ?? null,
     concelho: listing.regionName2 ?? null,
     latitude: listing.latitude ?? null,

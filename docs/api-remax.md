@@ -66,6 +66,22 @@ A chamada **tem de partir de um contexto com origem `remax.pt`** ou de um servid
 
 ---
 
+## Imagens
+
+`listingPictures` na resposta só traz caminhos relativos (ex.
+`listings/12116/7085378/a506cf4f-....jpg`). **Confirmado por inspeção do
+remax.pt (Ago 2026):** o CDN é `https://i.maxwork.pt/`, com um prefixo de
+tamanho antes do caminho:
+
+```
+https://i.maxwork.pt/{tamanho}/{caminho-de-listingPictures}
+```
+
+Tamanhos vistos em uso no próprio remax.pt: `l-feat` (cartão/destaque) e
+`ds-l` (página de detalhe, maior). Não confirmado se há mais tamanhos.
+
+---
+
 ## URLs dos anúncios
 
 ```
