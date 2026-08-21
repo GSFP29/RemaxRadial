@@ -86,7 +86,26 @@ A razão: a maioria dos contactos entra diretamente no telemóvel do consultor, 
 
 **Nunca aceitamos palavras-passe do cliente nem as escrevemos em campos de login.** A extração de plataformas autenticadas (MAXWORK) faz-se no **browser do próprio utilizador, com a sessão que ele já iniciou**. A palavra-passe nunca passa por nós.
 
-Consequência prática: extração **assistida** (o utilizador entra, nós extraímos a seguir) funciona sempre. Extração **automática sem ele** só funciona se a sessão sobreviver — a testar.
+Consequência prática: extração **assistida** (o utilizador entra, nós extraímos a seguir) funciona sempre. Extração **automática sem ele** — testado em 20 Ago 2026: **não é fiável**. A sessão teve pelo menos um erro de autenticação silenciosa a meio de um ciclo de ~1 minuto com pedidos consecutivos, e a própria plataforma (não nós) devolveu erro 524 (timeout do Cloudflare) ao tentar gerar um export de ~30 mil registos de uma vez. Não construir nenhuma funcionalidade do produto que dependa de manter uma sessão do MAXWORK viva sem o utilizador presente.
+
+---
+
+## MAXWORK — resolvido (20 Ago 2026)
+
+Sessão assistida no browser do Gonçalo (login Microsoft/OIDC), extração feita a partir daí. Respostas às perguntas que estavam em aberto:
+
+- **Há botão de exportar?** Sim — "Comercial → Leads → Exportar dados". Gera um `.xlsx` com mensagem completa da lead. **Não aguenta volumes grandes**: pedido de exportar todas as leads (~30 mil) devolveu 524 (timeout) duas vezes seguidas. Só é fiável para conjuntos pequenos (ex.: leads pendentes).
+- **Há uma API paginada?** Sim, `/api/Lead/SearchWithPagination` (POST), autenticada por Bearer token guardado em `localStorage` (chave `App.Maxwork.Backoffice.ClientApp.PTuser:...`, formato oidc-client). Corpo correto:
+  ```json
+  { "pageIndex": 1, "pageNumber": 1, "pageSize": 1000, "statusID": "", "officeID": "69" }
+  ```
+  **Armadilha:** sem `pageIndex` (só `pageNumber`), o servidor ignora silenciosamente o número de página e devolve sempre a primeira — confirmado mesmo na interface real (página 1 e página 1000 mostravam os mesmos registos). `officeID` também é necessário.
+- **Quanto dura a sessão?** O token de acesso não sobrevive de forma fiável a um ciclo automático de ~20-30 pedidos seguidos sem interação — apareceu "Silent authentication error: login_required" a meio de uma corrida. Na prática: pedir o token de novo (`localStorage`) a cada lote pequeno (10 páginas), não confiar num único token para uma corrida longa.
+- **As leads chegam também por email?** Ainda não confirmado — por perguntar.
+
+**Resultado da primeira importação:** 29 931 leads históricas (Jan 2025 – Ago 2026), via `scripts/importar-leads-maxwork-json.mjs`. Distribuição por origem: Idealista 17 546, Site RE/MAX 8 811, Imovirtual 2 957, CasaYes 489, Outro 128.
+
+**Processo para repetir:** abrir o MAXWORK no browser com sessão iniciada (assistido), correr os lotes de extração (ver os dois scripts em `scripts/`), depois `node --env-file=.env.local scripts/importar-leads-maxwork-json.mjs <ficheiros...>`. Não é automático de propósito — ver secção Credenciais.
 
 ---
 

@@ -51,7 +51,7 @@ O painel **lê sempre a nossa base de dados**, nunca consulta sistemas externos 
 
 1. **Portal RE/MAX** — API pública, funciona hoje. Ver `docs/api-remax.md`. É a fonte dos imóveis e do funil de negócios.
 2. **Emails dos portais** (idealista, Imovirtual, portal RE/MAX) — parsing de email para criar leads. Script de arranque em `docs/decisoes.md`.
-3. **MAXWORK** — plataforma interna da RE/MAX (`app.maxwork.pt`). É onde caem as leads. **Por resolver** — ver secção 8.
+3. **MAXWORK** — plataforma interna da RE/MAX (`app.maxwork.pt`). É onde caem as leads. **Resolvido (20 Ago 2026)** — ver `docs/decisoes.md`, secção MAXWORK, para como e as limitações.
 4. **Formulários do site** — avaliação, recrutamento, contacto.
 
 ---
@@ -106,7 +106,7 @@ Leitura que orienta o produto: metade das angariações de venda nunca chega a e
 
 ## 8. Em aberto — perguntar antes de assumir
 
-- **MAXWORK:** há botão de exportar? As leads chegam também por email? Quanto dura a sessão? Sem estas respostas não se desenha a integração. A extração faz-se sempre **no browser do utilizador, com a sessão dele** — nunca com credenciais nossas, que não aceitamos.
+- ~~**MAXWORK:**~~ Resolvido 20 Ago 2026 — ver `docs/decisoes.md`.
 - **CASAFARI:** a subscrição é individual, não de agência. Está a decorrer pedido de upgrade e de acesso à Property Data API. **Não construir nada que dependa da CASAFARI** até haver resposta escrita sobre o âmbito da licença.
 - **Email dos portais:** falta saber se a caixa é Google Workspace ou Microsoft 365 — decide a ferramenta de parsing.
 - **Regras da marca RE/MAX** sobre site próprio e uso das angariações do portal: por confirmar. O cliente preferiu não envolver a RE/MAX por agora.
