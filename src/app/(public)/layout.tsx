@@ -1,10 +1,16 @@
 import Link from "next/link";
+import { createClient } from "@/lib/supabase/server";
 
-export default function PublicLayout({
+export default async function PublicLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
   return (
     <div className="flex min-h-full flex-1 flex-col">
       {/* Barra de destaque com as cores da marca — sempre presente, discreta */}
@@ -25,6 +31,16 @@ export default function PublicLayout({
             <Link href="/arrendar" className="hover:text-brand-blue">
               Arrendar
             </Link>
+            {/* Só visível para quem já tem sessão (consultor/admin) — nunca
+                para um visitante anónimo, ver CLAUDE.md secção 2. */}
+            {user && (
+              <Link
+                href="/painel"
+                className="rounded-full bg-brand-blue/10 px-3 py-1 text-brand-blue hover:bg-brand-blue/20"
+              >
+                Painel →
+              </Link>
+            )}
           </nav>
         </div>
       </header>
