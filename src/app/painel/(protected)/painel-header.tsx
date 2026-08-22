@@ -37,6 +37,9 @@ export function PainelHeader({ email }: { email: string }) {
         <Link href="/painel/imoveis" className="hover:text-brand-blue">
           Desempenho da carteira
         </Link>
+        <Link href="/painel/documentos" className="hover:text-brand-blue">
+          Documentos
+        </Link>
         <span className="text-grid">|</span>
         <Link href="/comprar" className="text-foreground-secondary hover:text-brand-blue">
           Site: Comprar

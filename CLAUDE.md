@@ -133,6 +133,8 @@ Fontes, por ordem: rede RE/MAX (45k imóveis, já acessível, e partilha dentro 
 
 **Calendário de Escalas** — quem está de escala / tem de ficar no escritório a cada dia do mês, visível a todos os consultores. Pedido pelo cliente em 19 Ago 2026, por construir.
 
+**Documentos** — contratos, fichas e checklists de uso comum (CMI, mandatos, branqueamento de capitais, propostas), em português e inglês. Construído em 20 Ago 2026 a partir de ficheiros fornecidos pelo cliente; ficam no Storage do Supabase (bucket privado `documentos-consultor`), acesso só por link assinado gerado no momento do download.
+
 Outros separadores a acrescentar conforme forem surgindo — a estrutura deve permitir isso sem refazer nada.
 
 ---

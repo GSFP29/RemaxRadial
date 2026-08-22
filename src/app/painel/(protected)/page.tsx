@@ -6,6 +6,11 @@ const SEPARADORES = [
     descricao: "Tempo no mercado e descidas de preço vs. referência histórica",
     href: "/painel/imoveis",
   },
+  {
+    nome: "Documentos",
+    descricao: "Contratos, fichas e checklists — PT e EN",
+    href: "/painel/documentos",
+  },
   { nome: "Os meus imóveis", descricao: "Carteira, estado e dias em carteira" },
   { nome: "As minhas leads", descricao: "Funil pessoal e próximas ações" },
   { nome: "Pesquisa de mercado", descricao: "Filtros e mapa por zona" },
