@@ -23,11 +23,11 @@ export default async function HomePage() {
           />
 
           <h1 className="max-w-2xl text-2xl font-bold sm:text-3xl">
-            22 anos a vender e arrendar em Odivelas e concelhos vizinhos
+            22 anos a abrir portas para novas histórias
           </h1>
           <p className="max-w-xl text-foreground-secondary">
-            Agência 12116 da rede RE/MAX. Conheça a nossa carteira atual de
-            imóveis para venda e arrendamento.
+            Experiência, proximidade e conhecimento local para tornar cada
+            mudança mais simples.
           </p>
           <div className="mt-2 flex gap-3">
             <Link
