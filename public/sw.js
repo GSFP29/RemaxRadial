@@ -1,15 +1,29 @@
-// Service worker mínimo — "stale-while-revalidate" para pedidos GET.
-// Mostra o que estiver em cache instantaneamente e atualiza por trás.
-// Sem precache de rotas específicas: cresce à medida que se navega.
+// Service worker mínimo.
+//
+// Navegação (HTML): sempre rede primeiro — nunca mostrar uma página
+// desatualizada depois de uma publicação nova. Só usa a cache se a
+// rede falhar (offline).
+//
+// Resto (imagens, CSS, JS): stale-while-revalidate — mostra o que
+// estiver em cache instantaneamente, atualiza por trás.
 
-const CACHE_NAME = "radial-v1";
+const CACHE_NAME = "radial-v2";
 
 self.addEventListener("install", () => {
   self.skipWaiting();
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches
+      .keys()
+      .then((chaves) =>
+        Promise.all(
+          chaves.filter((c) => c !== CACHE_NAME).map((c) => caches.delete(c)),
+        ),
+      )
+      .then(() => self.clients.claim()),
+  );
 });
 
 self.addEventListener("fetch", (event) => {
@@ -17,6 +31,16 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
+
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request).catch(async () => {
+        const cache = await caches.open(CACHE_NAME);
+        return (await cache.match(event.request)) ?? Response.error();
+      }),
+    );
+    return;
+  }
 
   event.respondWith(
     caches.open(CACHE_NAME).then(async (cache) => {
