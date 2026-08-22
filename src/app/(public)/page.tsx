@@ -9,22 +9,23 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="relative overflow-hidden">
-        {/* Formas decorativas suaves — só estilo, sem informação */}
-        <div
-          aria-hidden
-          className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-brand-blue/10 blur-3xl"
-        />
-        <div
-          aria-hidden
-          className="absolute -right-24 top-10 h-80 w-80 rounded-full bg-brand-red/10 blur-3xl"
-        />
+      <section
+        className="relative overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: "url(/blob-hero.svg)" }}
+      >
+        <div className="relative flex flex-col items-center gap-6 px-6 py-28 text-center">
+          {/* Símbolo da Radial — placeholder até termos o ficheiro real do
+              logótipo (wordmark vermelho, sem círculo, "since 2003"). */}
+          <div className="flex flex-col items-center">
+            <span className="text-5xl font-extrabold tracking-tight text-brand-red sm:text-6xl">
+              RADIAL
+            </span>
+            <span className="mt-1 text-xs font-semibold tracking-[0.3em] text-brand-blue">
+              SINCE 2003
+            </span>
+          </div>
 
-        <div className="relative flex flex-col items-center gap-4 px-6 py-24 text-center">
-          <span className="rounded-full border border-brand-blue/20 bg-brand-blue/5 px-4 py-1 text-sm font-semibold tracking-wide text-brand-blue">
-            RE/MAX Radial · Odivelas
-          </span>
-          <h1 className="max-w-2xl text-4xl font-bold sm:text-5xl">
+          <h1 className="max-w-2xl text-2xl font-bold sm:text-3xl">
             22 anos a vender e arrendar em Odivelas e concelhos vizinhos
           </h1>
           <p className="max-w-xl text-foreground-secondary">
