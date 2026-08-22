@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { listarImoveisPorTipo } from "@/lib/imoveis";
+import { PropriedadesDestaque } from "@/components/propriedades-destaque";
 
 export default async function HomePage() {
   const [paraVenda, paraArrendar] = await Promise.all([
@@ -67,6 +68,8 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
+
+      <PropriedadesDestaque />
     </>
   );
 }

@@ -42,6 +42,14 @@ export function ImovelCard({ imovel }: { imovel: ImovelPublico }) {
         <span className="text-sm text-foreground-secondary">
           {[imovel.tipologia, imovel.freguesia].filter(Boolean).join(" · ")}
         </span>
+
+        {(imovel.quartos !== null || imovel.casas_banho !== null || imovel.area_m2 !== null) && (
+          <div className="mt-2 flex gap-4 border-t border-grid pt-2 text-xs text-foreground-secondary">
+            {imovel.quartos !== null && <span>{imovel.quartos} quartos</span>}
+            {imovel.casas_banho !== null && <span>{imovel.casas_banho} wc</span>}
+            {imovel.area_m2 !== null && <span>{imovel.area_m2} m²</span>}
+          </div>
+        )}
       </div>
     </Link>
   );

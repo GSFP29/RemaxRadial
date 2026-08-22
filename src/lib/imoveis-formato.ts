@@ -25,10 +25,30 @@ export type ImovelPublico = {
     listingPictures?: string[];
     userName?: string;
     userCellPhone?: string;
+    userEmail?: string | null;
     regionSearch2?: string;
     regionSearch3?: string;
+    parking?: boolean;
+    garage?: boolean;
+    elevator?: boolean;
+    electricCarsCharging?: boolean;
+    hasVTour?: boolean;
+    vTourLink?: string;
   } | null;
 };
+
+// Comodidades a mostrar como checklist na ficha do imóvel — só as que
+// a API confirma como verdadeiras, nunca listar o que não sabemos.
+export function comodidadesImovel(imovel: ImovelPublico): string[] {
+  const d = imovel.dados_api;
+  if (!d) return [];
+  const lista: string[] = [];
+  if (d.parking) lista.push("Estacionamento");
+  if (d.garage) lista.push("Garagem");
+  if (d.elevator) lista.push("Elevador");
+  if (d.electricCarsCharging) lista.push("Carregamento para carro elétrico");
+  return lista;
+}
 
 // Ver docs/api-remax.md, secção "Imagens" — CDN confirmado por inspeção,
 // não documentado pela RE/MAX.
