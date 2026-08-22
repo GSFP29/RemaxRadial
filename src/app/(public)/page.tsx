@@ -15,16 +15,12 @@ export default async function HomePage() {
         style={{ backgroundImage: "url(/blob-hero.svg)" }}
       >
         <div className="relative flex flex-col items-center gap-6 px-6 py-28 text-center">
-          {/* Símbolo da Radial — placeholder até termos o ficheiro real do
-              logótipo (wordmark vermelho, sem círculo, "since 2003"). */}
-          <div className="flex flex-col items-center">
-            <span className="text-5xl font-extrabold tracking-tight text-brand-red sm:text-6xl">
-              RADIAL
-            </span>
-            <span className="mt-1 text-xs font-semibold tracking-[0.3em] text-brand-blue">
-              SINCE 2003
-            </span>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-radial.jpg"
+            alt="RE/MAX Radial — since 2003"
+            className="w-full max-w-xl"
+          />
 
           <h1 className="max-w-2xl text-2xl font-bold sm:text-3xl">
             22 anos a vender e arrendar em Odivelas e concelhos vizinhos
