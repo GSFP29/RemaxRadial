@@ -17,7 +17,7 @@ export default async function HomePage() {
         <div className="relative flex flex-col items-center gap-6 px-6 py-28 text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-radial.jpg"
+            src="/logo-radial.png"
             alt="RE/MAX Radial — since 2003"
             className="w-full max-w-xl"
           />
