@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { listarImoveisPorTipo } from "@/lib/imoveis";
 import { PropriedadesDestaque } from "@/components/propriedades-destaque";
+import { SplashEntrada } from "@/components/splash-entrada";
 
 export default async function HomePage() {
   const [paraVenda, paraArrendar] = await Promise.all([
@@ -10,6 +11,8 @@ export default async function HomePage() {
 
   return (
     <>
+      <SplashEntrada />
+
       <section
         className="relative overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: "url(/blob-hero.svg)" }}
