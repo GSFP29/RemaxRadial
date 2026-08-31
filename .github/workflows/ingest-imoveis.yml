@@ -1,0 +1,27 @@
+name: Ingestão diária de imóveis
+
+# Chama o endpoint que sincroniza os imóveis com a API RE/MAX — atualiza os
+# que mudaram e marca como "desaparecido" os que a API deixou de devolver
+# (ver src/app/api/ingest/imoveis/route.ts). Falha o job (e avisa no GitHub)
+# se o pedido não responder 200, para nunca ficar silenciosamente parado.
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # 05:00 UTC, todos os dias
+  workflow_dispatch: {}
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chamar o endpoint de ingestão
+        run: |
+          resposta=$(curl -sS -o corpo.json -w "%{http_code}" -X POST \
+            "https://radial.remaxradial.workers.dev/api/ingest/imoveis" \
+            -H "Authorization: Bearer ${{ secrets.INGEST_SECRET }}")
+          echo "Estado HTTP: $resposta"
+          cat corpo.json
+          if [ "$resposta" != "200" ]; then
+            echo "::error::Ingestão falhou com estado $resposta"
+            exit 1
+          fi
