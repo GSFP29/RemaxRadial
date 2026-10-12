@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "buy": "Comprar",
+    "rent": "Alquilar",
+    "sell": "Vender",
+    "contact": "Contáctanos",
+    "panel": "Panel →"
+  },
+  "footer": {
+    "agency": "Agencia 12116 · Odivelas",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Uso",
+    "rights": "© {ano} RE/MAX Radial · Agencia 12116"
+  },
+  "home": {
+    "heroTitle": "22 años abriendo puertas a nuevas historias",
+    "heroSubtitle": "Experiencia, cercanía y conocimiento local para hacer cada cambio más sencillo.",
+    "buy": "Comprar",
+    "rent": "Alquilar",
+    "sell": "Vender",
+    "statsYears": "años de actividad",
+    "statsForSale": "inmuebles en venta",
+    "statsForRent": "inmuebles en alquiler",
+    "featuredTitle": "Propiedades destacadas",
+    "featuredSubtitle": "Una selección de nuestra cartera, pensada para usted.",
+    "viewAll": "Ver todos los inmuebles →",
+    "reviewsTitle": "Historias reales de clientes satisfechos"
+  },
+  "ctaCards": {
+    "sellTitle": "¿Quiere vender su inmueble?",
+    "sellDescription": "Tasación gratuita y venta acompañada por los mejores consultores de la zona.",
+    "joinTitle": "Únase a nuestro equipo",
+    "joinDescription": "Forme parte de la mayor red inmobiliaria del mundo y construya una carrera de éxito.",
+    "learnMore": "Saber más"
+  },
+  "maxfinance": {
+    "eyebrow": "MaxFinance Delta",
+    "title": "Financiación con quien entiende del tema",
+    "description": "Simulación gratuita de la cuota, escenarios de amortización anticipada y acompañamiento en todo el proceso de crédito hipotecario.",
+    "learnMore": "Saber más"
+  },
+  "listing": {
+    "available_one": "inmueble disponible",
+    "available_other": "inmuebles disponibles",
+    "empty": "No hay inmuebles que coincidan con estos filtros."
+  },
+  "filters": {
+    "title": "Filtros",
+    "clear": "Limpiar",
+    "typology": "Tipología",
+    "all": "Todas",
+    "zone": "Zona",
+    "agent": "Consultor",
+    "allAgents": "Todos",
+    "submit": "Filtrar"
+  },
+  "pagination": {
+    "nav": "Paginación",
+    "previous": "Página anterior",
+    "next": "Página siguiente"
+  },
+  "propertyCard": {
+    "sale": "Venta",
+    "rent": "Alquiler",
+    "noPhoto": "Sin foto",
+    "bedrooms": "habitaciones",
+    "bathrooms": "baños"
+  },
+  "propertyDetail": {
+    "back": "← Volver a los inmuebles",
+    "viewOnRemax": "Ver anuncio en RE/MAX →",
+    "bedrooms": "Habitaciones",
+    "bathrooms": "Baños",
+    "totalArea": "Superficie total",
+    "propertyType": "Tipo de inmueble",
+    "amenities": "Comodidades",
+    "contactAgent": "Contactar al Consultor",
+    "contactAgency": "Contactar a la Agencia",
+    "talkOnWhatsapp": "Hablar por WhatsApp"
+  },
+  "financing": {
+    "cardTitle": "Haga ya su pre-análisis de financiación",
+    "cardSubtitle": "Totalmente gratis — conozca la cuota estimada en 30 segundos",
+    "cta": "Simular →",
+    "panelTitle": "Pre-análisis de financiación",
+    "propertyValue": "Valor del inmueble (€)",
+    "downPayment": "Entrada (€)",
+    "annualRate": "Tasa anual — TIN (%)",
+    "termYears": "Plazo (años)",
+    "netIncome": "Ingresos netos del hogar (€/mes) — opcional",
+    "monthlyPayment": "Cuota mensual",
+    "financedAmount": "Importe financiado",
+    "ltv": "LTV",
+    "debtRatio": "Tasa de esfuerzo",
+    "disclaimer": "Simulación indicativa (cuota, LTV y tasa de esfuerzo). No incluye ITP/IVA, Impuesto de Actos Jurídicos ni gastos de notaría.",
+    "simulateOthers": "Simule estos y otros créditos en MaxFinance Delta",
+    "requestSent": "¡Solicitud enviada! Un especialista se pondrá en contacto en breve.",
+    "formTitle": "Quiero recibir esta simulación y hablar con un especialista",
+    "name": "Nombre",
+    "email": "Email",
+    "phoneOptional": "Teléfono (opcional)",
+    "consent": "Autorizo a RE/MAX Radial y a MaxFinance Delta a contactarme con base en estos datos. *",
+    "submit": "Solicitar análisis gratuito",
+    "sending": "Enviando..."
+  },
+  "contact": {
+    "title": "Hablemos de su próximo paso",
+    "subtitle": "22 años en Odivelas acompañando a quienes compran, venden y alquilan. Estamos aquí para ayudar.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappDescription": "Hable con nosotros directamente, sin esperas.",
+    "whatsappCta": "Abrir conversación",
+    "phoneTitle": "Teléfono",
+    "phoneDescription": "Atención directa en horario de oficina.",
+    "officeTitle": "Oficina",
+    "officeDescription": "22 años de actividad en la misma zona.",
+    "formName": "Nombre",
+    "formEmail": "Email",
+    "formPhone": "Teléfono (opcional)",
+    "formMessage": "Mensaje",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando...",
+    "responseTime": "Respondemos en 24 a 48 horas laborables.",
+    "successTitle": "¡Mensaje enviado!",
+    "successBody": "Gracias por contactarnos. Respondemos en 24 a 48 horas laborables."
+  },
+  "sell": {
+    "title": "¿Quiere vender su inmueble?",
+    "subtitle": "Tasación gratuita, sin compromiso. Cuéntenos lo esencial — nosotros nos encargamos del resto.",
+    "formName": "Nombre",
+    "formEmail": "Email",
+    "formPhone": "Teléfono",
+    "formPropertyType": "Tipo de inmueble",
+    "formChoose": "Elegir...",
+    "formDistrict": "Distrito",
+    "formCounty": "Municipio",
+    "formParish": "Freguesia",
+    "submit": "Solicitar tasación gratuita",
+    "sending": "Enviando...",
+    "responseTime": "Respondemos en 24 a 48 horas laborables.",
+    "successTitle": "¡Solicitud recibida!",
+    "successBody": "Gracias. Uno de nuestros consultores se pondrá en contacto en 24 a 48 horas laborables con la tasación gratuita de su inmueble."
+  },
+  "recruit": {
+    "title": "Únase a nuestro equipo",
+    "subtitle": "22 años de una marca fuerte en Odivelas. Construya su carrera con el apoyo de un equipo que ya conoce el mercado.",
+    "formName": "Nombre",
+    "formEmail": "Email",
+    "formPhone": "Teléfono",
+    "formMessage": "Cuéntenos un poco sobre usted (opcional)",
+    "submit": "Enviar candidatura",
+    "sending": "Enviando...",
+    "responseTime": "Respondemos en 24 a 48 horas laborables.",
+    "successTitle": "¡Candidatura recibida!",
+    "successBody": "Gracias por su interés. Nos pondremos en contacto en 24 a 48 horas laborables para concertar una conversación."
+  },
+  "project": {
+    "instructions": "Toque los puntos marcados para ver más detalle."
+  },
+  "contacteBotao": {
+    "label": "Contáctanos",
+    "whatsapp": "WhatsApp",
+    "phone": "Teléfono"
+  },
+  "languageSwitcher": {
+    "label": "Idioma"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Las dudas más comunes de quienes compran, venden o alquilan con nosotros.",
+    "items": [
+      {
+        "question": "¿Cuánto tiempo tarda en venderse o alquilarse un inmueble?",
+        "answer": "Depende del tipo de inmueble, la ubicación y el precio solicitado. Seguimos la evolución del inmueble en el mercado y ajustamos la estrategia con usted a lo largo del proceso, con 22 años de experiencia local en Odivelas."
+      },
+      {
+        "question": "¿La valoración de mi inmueble tiene algún coste?",
+        "answer": "No. La valoración es gratuita y sin compromiso, basada en comparables reales del mercado local."
+      },
+      {
+        "question": "¿Qué documentos necesito para vender mi inmueble?",
+        "answer": "Normalmente el registro de la propiedad, la certificación catastral, la licencia de ocupación (cuando aplica) y el certificado energético. El consultor le ayuda a reunir todo lo necesario."
+      },
+      {
+        "question": "¿RE/MAX Radial solo trabaja en Odivelas?",
+        "answer": "Nuestra oficina está en Odivelas, pero también gestionamos inmuebles en la zona circundante, con acceso a la red RE/MAX a nivel nacional e internacional."
+      },
+      {
+        "question": "¿Cómo puedo contactar con un consultor?",
+        "answer": "A través del formulario de contacto, WhatsApp, teléfono, o visitando nuestra oficina en Av. 25 de Abril, Odivelas."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "body": "La página que busca no existe o ha sido movida.",
+    "cta": "Volver al inicio"
+  },
+  "errors": {
+    "contactRequired": "Rellene el nombre, el email y el mensaje.",
+    "sellRequired": "Rellene todos los campos.",
+    "recruitRequired": "Rellene el nombre, el email y el teléfono.",
+    "financingRequired": "Rellene el nombre, el email y acepte la autorización.",
+    "sendFailed": "No se pudo enviar. Inténtelo de nuevo."
+  }
+}

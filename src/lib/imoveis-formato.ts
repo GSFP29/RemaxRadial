@@ -75,6 +75,21 @@ export function urlAnuncioRemax(imovel: ImovelPublico): string {
   return `https://www.remax.pt/pt/imoveis/${slug}/${imovel.ref_remax}`;
 }
 
+// Título curto e legível do imóvel, usado no ecrã e nas mensagens de
+// contacto (WhatsApp) — não vem da API, é composto a partir dos campos
+// que já temos.
+export function tituloImovel(imovel: ImovelPublico): string {
+  return (
+    [imovel.tipo_imovel, imovel.tipologia].filter(Boolean).join(" ") +
+    (imovel.freguesia ? ` em ${imovel.freguesia}` : "")
+  ).trim();
+}
+
+export function mensagemWhatsappImovel(imovel: ImovelPublico): string {
+  const titulo = tituloImovel(imovel) || `imóvel ${imovel.ref_remax}`;
+  return `Olá! Estou interessado(a) no imóvel ${titulo} que vi no vosso site. Ainda está disponível? Gostaria de saber mais. Obrigado(a)!`;
+}
+
 export function formatarPreco(valor: number | null): string {
   if (valor === null) return "Sob consulta";
   return new Intl.NumberFormat("pt-PT", {

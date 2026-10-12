@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { imagemUrl } from "@/lib/imoveis-formato";
 
-export function GaleriaFotos({ fotos }: { fotos: string[] }) {
+export function GaleriaFotos({ fotos, descricao = "Imóvel" }: { fotos: string[]; descricao?: string }) {
   const [indice, setIndice] = useState(0);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -44,7 +44,7 @@ export function GaleriaFotos({ fotos }: { fotos: string[] }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={imagemUrl(foto, "ds-l")}
-              alt=""
+              alt={`${descricao} — foto ${i + 1}`}
               className="h-full w-full object-cover transition hover:scale-105"
             />
           </button>
@@ -84,7 +84,7 @@ export function GaleriaFotos({ fotos }: { fotos: string[] }) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={imagemUrl(fotos[indice], "ds-l")}
-            alt=""
+            alt={`${descricao} — foto ${indice + 1}`}
             className="max-h-[85vh] max-w-[85vw] object-contain"
           />
 

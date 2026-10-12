@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /painel
+Disallow: /api
+
+Sitemap: https://radial.remaxradial.workers.dev/sitemap.xml

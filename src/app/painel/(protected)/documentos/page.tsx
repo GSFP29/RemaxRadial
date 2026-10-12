@@ -1,3 +1,4 @@
+import { FileText } from "lucide-react";
 import { listarDocumentos, type DocumentoConsultor } from "@/lib/documentos";
 
 const ROTULO_IDIOMA: Record<DocumentoConsultor["idioma"], string> = {
@@ -53,9 +54,12 @@ export default async function DocumentosPage({
                 <a
                   key={doc.id}
                   href={`/api/documentos/${doc.id}/download`}
-                  className="flex items-center justify-between gap-3 rounded-md border border-grid px-4 py-3 text-sm hover:border-brand-blue"
+                  className="flex items-center gap-3 rounded-xl border border-grid px-4 py-3 text-sm transition hover:-translate-y-0.5 hover:border-brand-blue hover:shadow-sm"
                 >
-                  <span>{doc.nome}</span>
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-blue/10 text-brand-blue">
+                    <FileText size={16} />
+                  </span>
+                  <span className="flex-1">{doc.nome}</span>
                   <span className="shrink-0 rounded-full bg-brand-blue/10 px-2 py-0.5 text-xs font-semibold text-brand-blue">
                     {ROTULO_IDIOMA[doc.idioma]}
                   </span>

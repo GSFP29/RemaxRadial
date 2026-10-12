@@ -1,5 +1,4 @@
 <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-  <rect x="0" y="0" width="960" height="540" fill="#FFFFFF"></rect>
   <g transform="translate(960, 0)">
     <path d="M0 320C-48.6 313.8 -97.2 307.6 -132.9 284.4C-168.6 261.2 -191.3 221 -213.6 180.9C-235.9 140.8 -257.8 100.9 -270.9 56.5C-284 12.1 -288.3 -36.8 -297 -85.6L0 -85.6Z" fill="#0033a0" opacity="0.94"></path>
   </g>

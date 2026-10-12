@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { AlarmClock, Building2, Clock, TrendingDown } from "lucide-react";
 import {
   BENCHMARKS,
   diasEmCarteira,
@@ -12,6 +13,7 @@ import {
   type AlteracaoImovel,
   type ImovelDashboard,
 } from "@/lib/dashboard-formato";
+import { CartaoStat } from "@/components/ui/cartoes";
 
 type Props = {
   imoveis: ImovelDashboard[];
@@ -70,24 +72,32 @@ export function DashboardImoveis({ imoveis, alteracoesPorImovel }: Props) {
     <div>
       <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <CartaoStat
+          icone={Building2}
           rotulo="Em mercado"
           valor={String(stats.total)}
           referencia="Ago 2026: 87"
+          cor="chart1"
         />
         <CartaoStat
+          icone={Clock}
           rotulo="Idade mediana"
           valor={stats.idadeMediana !== null ? `${stats.idadeMediana} dias` : "—"}
           referencia={`Ago 2026: ${BENCHMARKS.idadeMedianaSnapshot} dias`}
+          cor="chart3"
         />
         <CartaoStat
+          icone={TrendingDown}
           rotulo="Com descida de preço"
           valor={String(stats.comDescida)}
           referencia={`Ago 2026: ${BENCHMARKS.imoveisComDescidaSnapshot}`}
+          cor="chart2"
         />
         <CartaoStat
+          icone={AlarmClock}
           rotulo="Mais de 1 ano em carteira"
           valor={String(stats.maisDeUmAno)}
           referencia={`Ago 2026: ${BENCHMARKS.maisDeUmAnoSnapshot}`}
+          cor="vermelho"
         />
       </div>
 
@@ -152,7 +162,7 @@ export function DashboardImoveis({ imoveis, alteracoesPorImovel }: Props) {
       <dialog
         ref={dialogRef}
         onClick={fechar}
-        className="w-full max-w-2xl rounded-lg border-none p-0 backdrop:bg-black/50"
+        className="w-full max-w-2xl rounded-lg border-none bg-background p-0 text-foreground backdrop:bg-black/50"
       >
         {selecionado && (
           <div onClick={(e) => e.stopPropagation()} className="p-6">
@@ -230,24 +240,6 @@ export function DashboardImoveis({ imoveis, alteracoesPorImovel }: Props) {
           </div>
         )}
       </dialog>
-    </div>
-  );
-}
-
-function CartaoStat({
-  rotulo,
-  valor,
-  referencia,
-}: {
-  rotulo: string;
-  valor: string;
-  referencia: string;
-}) {
-  return (
-    <div className="rounded-lg border border-grid p-4">
-      <p className="text-xs text-foreground-secondary">{rotulo}</p>
-      <p className="text-2xl font-bold">{valor}</p>
-      <p className="text-xs text-foreground-secondary">{referencia}</p>
     </div>
   );
 }

@@ -156,3 +156,17 @@ Pedidos pelo cliente e registados no `CLAUDE.md`, secção 9:
 - **Calendário de Escalas** (pedido em 19 Ago 2026) — calendário do mês a mostrar que consultor está de escala / tem de ficar no escritório em cada dia. Por construir — a fazer a seguir.
 
 A estrutura de separadores deve permitir acrescentar outros sem refazer a navegação — vão surgir mais.
+
+## Site público: Vender, simulador de financiamento e avaliações (23 Ago 2026)
+
+**Aba "Vender"** (`/vender`) — formulário simples (nome, email, telefone, tipo de imóvel, distrito/concelho/freguesia), inspirado em `grupovantagem.com/vender` mas deliberadamente mais curto (o cliente achou a referência "muito stacked"). Escreve sempre em `leads` (origem `formulario_site`) + detalhe próprio em `pedidos_venda`, via `createAdminClient()` (service role) — nunca insert anon direto.
+
+**Pré-simulação de financiamento** na ficha do imóvel (`src/components/simulador-financiamento.tsx`) — calcula prestação mensal, montante financiado, LTV e taxa de esforço com a fórmula padrão de prestação constante (matemática verificável, sem risco). **Decisão deliberada:** não replica o cálculo de IMT/Imposto de Selo/custos de escritura do simulador da MaxFinance Delta (`maxfinancedelta.com/simuladores/credito-habitacao`) — são tabelas fiscais que mudam e um erro nosso teria consequência real para alguém. Para isso, a página remete para o simulador da MaxFinance com um link discreto. A lead fica em `leads` + `simulacoes_financiamento`, com consentimento explícito (checkbox obrigatório) para partilha com a MaxFinance Delta — o encaminhamento em si ainda é manual, não há API/webhook combinado.
+
+**Recrutamento** (`/juntar-equipa`) — formulário simples de candidatura espontânea, escreve em `leads`. Isto é distinto da pergunta em aberto sobre prospeção no LinkedIn (ver memória `funil_marketing_planeado`) — aceitar candidaturas de quem já quer aplicar não tem o problema de conformidade de ir procurar pessoas ativamente.
+
+**Avaliações do Google na homepage** — tabela `avaliacoes_google`, entrada manual pelo administrador (`/painel/avaliacoes`), só as de 5 estrelas aparecem no site. Sem ligação à API do Google Places por agora — para não inventar conteúdo, a secção fica simplesmente escondida enquanto não houver avaliações registadas.
+
+**Filtro "Zona" agora é Distrito → Concelho** (era freguesia) — menu em árvore (`src/components/seletor-zona-arvore.tsx`, inspirado em `ui.watermelon.sh/animated-components/tree-menu`, mas com transições CSS puras em vez da biblioteca `motion`, que causou um erro de runtime neste ambiente). Mapa concelho→distrito em `src/lib/distritos-concelhos.ts` — geografia administrativa de Portugal, feita de memória; se encontrares um concelho no distrito errado, é só corrigir esse ficheiro.
+
+**Gap conhecido:** com estes formulários, `leads` está finalmente a receber dados reais do site — mas a funcionalidade "As minhas leads" (funil pessoal do consultor) ainda não foi construída. Por agora, só o administrador consegue ver as leads novas (RLS: lead sem `consultor_id` só é visível a `is_administrador()`), diretamente no Supabase.

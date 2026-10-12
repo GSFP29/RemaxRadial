@@ -1,10 +1,13 @@
+import { useTranslations } from "next-intl";
+import { SeletorZonaArvore } from "@/components/seletor-zona-arvore";
+
 const CLASSE_SELECT =
   "w-full rounded-md border border-grid bg-background px-3 py-2 text-sm outline-none focus:border-brand-blue";
 
 type Props = {
   action: string;
   tipologias: string[];
-  freguesias: string[];
+  concelhos: string[];
   consultores: string[];
   valores: { tipologia?: string; zona?: string; consultor?: string };
 };
@@ -12,11 +15,12 @@ type Props = {
 export function FiltrosImoveis({
   action,
   tipologias,
-  freguesias,
+  concelhos,
   consultores,
   valores,
 }: Props) {
   const temFiltroAtivo = valores.tipologia || valores.zona || valores.consultor;
+  const t = useTranslations("filters");
 
   return (
     <form
@@ -24,51 +28,40 @@ export function FiltrosImoveis({
       className="flex w-full flex-col gap-5 rounded-lg border border-grid p-5"
     >
       <div className="flex items-center justify-between">
-        <h2 className="font-semibold">Filtros</h2>
+        <h2 className="font-semibold">{t("title")}</h2>
         {temFiltroAtivo && (
           <a href={action} className="text-xs text-brand-blue underline">
-            Limpar
+            {t("clear")}
           </a>
         )}
       </div>
 
-      <Campo icone={<IconeTipologia />} label="Tipologia">
+      <Campo icone={<IconeTipologia />} label={t("typology")}>
         <select
           name="tipologia"
           defaultValue={valores.tipologia ?? ""}
           className={CLASSE_SELECT}
         >
-          <option value="">Todas</option>
-          {tipologias.map((t) => (
-            <option key={t} value={t}>
-              {t}
+          <option value="">{t("all")}</option>
+          {tipologias.map((tipologia) => (
+            <option key={tipologia} value={tipologia}>
+              {tipologia}
             </option>
           ))}
         </select>
       </Campo>
 
-      <Campo icone={<IconeZona />} label="Zona">
-        <select
-          name="zona"
-          defaultValue={valores.zona ?? ""}
-          className={CLASSE_SELECT}
-        >
-          <option value="">Todas</option>
-          {freguesias.map((f) => (
-            <option key={f} value={f}>
-              {f}
-            </option>
-          ))}
-        </select>
+      <Campo icone={<IconeZona />} label={t("zone")}>
+        <SeletorZonaArvore concelhos={concelhos} valorInicial={valores.zona} />
       </Campo>
 
-      <Campo icone={<IconeConsultor />} label="Consultor responsável">
+      <Campo icone={<IconeConsultor />} label={t("agent")}>
         <select
           name="consultor"
           defaultValue={valores.consultor ?? ""}
           className={CLASSE_SELECT}
         >
-          <option value="">Todos</option>
+          <option value="">{t("allAgents")}</option>
           {consultores.map((c) => (
             <option key={c} value={c}>
               {c}
@@ -81,7 +74,7 @@ export function FiltrosImoveis({
         type="submit"
         className="w-full rounded-md bg-brand-blue px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110"
       >
-        Filtrar
+        {t("submit")}
       </button>
     </form>
   );

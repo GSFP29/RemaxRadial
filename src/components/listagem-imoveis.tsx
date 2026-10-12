@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import {
   listarImoveisPorTipo,
   obterOpcoesFiltro,
@@ -5,12 +6,20 @@ import {
 } from "@/lib/imoveis";
 import { FiltrosImoveis } from "@/components/filtros-imoveis";
 import { ImovelCard } from "@/components/imovel-card";
+import { PaginacaoImoveis } from "@/components/paginacao-imoveis";
+
+const POR_PAGINA = 18;
 
 type Props = {
   tipo: TipoNegocio;
   titulo: string;
   actionFiltros: string;
-  searchParams: { tipologia?: string; zona?: string; consultor?: string };
+  searchParams: {
+    tipologia?: string;
+    zona?: string;
+    consultor?: string;
+    pagina?: string;
+  };
 };
 
 export async function ListagemImoveis({
@@ -21,21 +30,30 @@ export async function ListagemImoveis({
 }: Props) {
   const filtros = {
     tipologia: searchParams.tipologia,
-    freguesia: searchParams.zona,
+    concelho: searchParams.zona,
     consultor: searchParams.consultor,
   };
 
-  const [imoveis, opcoes] = await Promise.all([
+  const t = await getTranslations("listing");
+  const [todosImoveis, opcoes] = await Promise.all([
     listarImoveisPorTipo(tipo, filtros),
     obterOpcoesFiltro(tipo),
   ]);
+
+  const totalPaginas = Math.max(1, Math.ceil(todosImoveis.length / POR_PAGINA));
+  const paginaPedida = Number(searchParams.pagina) || 1;
+  const paginaAtual = Math.min(Math.max(paginaPedida, 1), totalPaginas);
+  const imoveis = todosImoveis.slice(
+    (paginaAtual - 1) * POR_PAGINA,
+    paginaAtual * POR_PAGINA,
+  );
 
   return (
     <div className="mx-auto w-full max-w-6xl px-6 py-10">
       <h1 className="mb-1 text-2xl font-bold">{titulo}</h1>
       <p className="mb-6 text-sm text-foreground-secondary">
-        {imoveis.length}{" "}
-        {imoveis.length === 1 ? "imóvel disponível" : "imóveis disponíveis"}
+        {todosImoveis.length}{" "}
+        {todosImoveis.length === 1 ? t("available_one") : t("available_other")}
       </p>
 
       <div className="flex flex-col gap-8 md:flex-row">
@@ -44,7 +62,7 @@ export async function ListagemImoveis({
             <FiltrosImoveis
               action={actionFiltros}
               tipologias={opcoes.tipologias}
-              freguesias={opcoes.freguesias}
+              concelhos={opcoes.concelhos}
               consultores={opcoes.consultores}
               valores={{
                 tipologia: searchParams.tipologia,
@@ -57,9 +75,7 @@ export async function ListagemImoveis({
 
         <div className="flex-1">
           {imoveis.length === 0 ? (
-            <p className="text-foreground-secondary">
-              Não há imóveis que correspondam a estes filtros.
-            </p>
+            <p className="text-foreground-secondary">{t("empty")}</p>
           ) : (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {imoveis.map((imovel) => (
@@ -67,6 +83,17 @@ export async function ListagemImoveis({
               ))}
             </div>
           )}
+
+          <PaginacaoImoveis
+            baseHref={actionFiltros}
+            filtros={{
+              tipologia: searchParams.tipologia,
+              zona: searchParams.zona,
+              consultor: searchParams.consultor,
+            }}
+            paginaAtual={paginaAtual}
+            totalPaginas={totalPaginas}
+          />
         </div>
       </div>
     </div>

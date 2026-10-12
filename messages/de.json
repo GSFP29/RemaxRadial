@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "buy": "Kaufen",
+    "rent": "Mieten",
+    "sell": "Verkaufen",
+    "contact": "Kontaktieren Sie uns",
+    "panel": "Bereich →"
+  },
+  "footer": {
+    "agency": "Agentur 12116 · Odivelas",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "rights": "© {ano} RE/MAX Radial · Agentur 12116"
+  },
+  "home": {
+    "heroTitle": "22 Jahre, in denen wir Türen zu neuen Geschichten öffnen",
+    "heroSubtitle": "Erfahrung, Nähe und lokales Wissen, damit jeder Umzug einfacher wird.",
+    "buy": "Kaufen",
+    "rent": "Mieten",
+    "sell": "Verkaufen",
+    "statsYears": "Jahre am Markt",
+    "statsForSale": "Immobilien zum Verkauf",
+    "statsForRent": "Immobilien zur Miete",
+    "featuredTitle": "Ausgewählte Immobilien",
+    "featuredSubtitle": "Eine Auswahl aus unserem Portfolio, mit Blick auf Sie zusammengestellt.",
+    "viewAll": "Alle Immobilien ansehen →",
+    "reviewsTitle": "Echte Geschichten zufriedener Kunden"
+  },
+  "ctaCards": {
+    "sellTitle": "Möchten Sie Ihre Immobilie verkaufen?",
+    "sellDescription": "Kostenlose Bewertung und ein Verkauf, begleitet von den besten Beratern der Region.",
+    "joinTitle": "Werden Sie Teil unseres Teams",
+    "joinDescription": "Werden Sie Teil des größten Immobiliennetzwerks der Welt und bauen Sie sich eine erfolgreiche Karriere auf.",
+    "learnMore": "Mehr erfahren"
+  },
+  "maxfinance": {
+    "eyebrow": "MaxFinance Delta",
+    "title": "Finanzierung mit echten Experten",
+    "description": "Kostenlose Ratensimulation, Szenarien zur vorzeitigen Tilgung und Begleitung während des gesamten Immobilienkreditprozesses.",
+    "learnMore": "Mehr erfahren"
+  },
+  "listing": {
+    "available_one": "verfügbare Immobilie",
+    "available_other": "verfügbare Immobilien",
+    "empty": "Keine Immobilien entsprechen diesen Filtern."
+  },
+  "filters": {
+    "title": "Filter",
+    "clear": "Zurücksetzen",
+    "typology": "Zimmertyp",
+    "all": "Alle",
+    "zone": "Gebiet",
+    "agent": "Zuständiger Berater",
+    "allAgents": "Alle",
+    "submit": "Filtern"
+  },
+  "pagination": {
+    "nav": "Seitennummerierung",
+    "previous": "Vorherige Seite",
+    "next": "Nächste Seite"
+  },
+  "propertyCard": {
+    "sale": "Verkauf",
+    "rent": "Miete",
+    "noPhoto": "Kein Foto",
+    "bedrooms": "Zimmer",
+    "bathrooms": "Bäder"
+  },
+  "propertyDetail": {
+    "back": "← Zurück zu den Immobilien",
+    "viewOnRemax": "Anzeige auf RE/MAX ansehen →",
+    "bedrooms": "Zimmer",
+    "bathrooms": "Badezimmer",
+    "totalArea": "Gesamtfläche",
+    "propertyType": "Immobilientyp",
+    "amenities": "Ausstattung",
+    "contactAgent": "Berater kontaktieren",
+    "contactAgency": "Agentur kontaktieren",
+    "talkOnWhatsapp": "Über WhatsApp sprechen"
+  },
+  "financing": {
+    "cardTitle": "Machen Sie jetzt Ihre kostenlose Finanzierungsvoranalyse",
+    "cardSubtitle": "Völlig kostenlos — erfahren Sie in 30 Sekunden Ihre geschätzte Rate",
+    "cta": "Simulieren →",
+    "panelTitle": "Finanzierungsvoranalyse",
+    "propertyValue": "Immobilienwert (€)",
+    "downPayment": "Eigenkapital (€)",
+    "annualRate": "Jährlicher Zinssatz — Sollzins (%)",
+    "termYears": "Laufzeit (Jahre)",
+    "netIncome": "Netto-Haushaltseinkommen (€/Monat) — optional",
+    "monthlyPayment": "Monatliche Rate",
+    "financedAmount": "Finanzierter Betrag",
+    "ltv": "Beleihungsauslauf (LTV)",
+    "debtRatio": "Schuldendienstquote",
+    "disclaimer": "Indikative Simulation (Rate, LTV und Schuldendienstquote). Enthält keine Grunderwerbsteuer, Stempelsteuer oder Notarkosten.",
+    "simulateOthers": "Simulieren Sie diese und andere Kredite bei MaxFinance Delta",
+    "requestSent": "Anfrage gesendet! Ein Spezialist meldet sich in Kürze bei Ihnen.",
+    "formTitle": "Ich möchte diese Simulation erhalten und mit einem Spezialisten sprechen",
+    "name": "Name",
+    "email": "E-Mail",
+    "phoneOptional": "Telefon (optional)",
+    "consent": "Ich erlaube RE/MAX Radial und MaxFinance Delta, mich anhand dieser Angaben zu kontaktieren. *",
+    "submit": "Kostenlose Analyse anfordern",
+    "sending": "Wird gesendet..."
+  },
+  "contact": {
+    "title": "Sprechen wir über Ihren nächsten Schritt",
+    "subtitle": "22 Jahre in Odivelas, an der Seite von Käufern, Verkäufern und Mietern. Wir sind für Sie da.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappDescription": "Sprechen Sie direkt mit uns, ohne Wartezeit.",
+    "whatsappCta": "Chat öffnen",
+    "phoneTitle": "Telefon",
+    "phoneDescription": "Direkte Betreuung während der Geschäftszeiten.",
+    "officeTitle": "Büro",
+    "officeDescription": "22 Jahre Tätigkeit in derselben Region.",
+    "formName": "Name",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon (optional)",
+    "formMessage": "Nachricht",
+    "submit": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "responseTime": "Wir antworten innerhalb von 24 bis 48 Werkstunden.",
+    "successTitle": "Nachricht gesendet!",
+    "successBody": "Danke für Ihre Kontaktaufnahme. Wir antworten innerhalb von 24 bis 48 Werkstunden."
+  },
+  "sell": {
+    "title": "Möchten Sie Ihre Immobilie verkaufen?",
+    "subtitle": "Kostenlose Bewertung, unverbindlich. Nennen Sie uns das Wichtigste — wir kümmern uns um den Rest.",
+    "formName": "Name",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon",
+    "formPropertyType": "Immobilientyp",
+    "formChoose": "Auswählen...",
+    "formDistrict": "Distrikt",
+    "formCounty": "Gemeinde",
+    "formParish": "Gemeindebezirk",
+    "submit": "Kostenlose Bewertung anfordern",
+    "sending": "Wird gesendet...",
+    "responseTime": "Wir antworten innerhalb von 24 bis 48 Werkstunden.",
+    "successTitle": "Anfrage erhalten!",
+    "successBody": "Danke. Einer unserer Berater meldet sich innerhalb von 24 bis 48 Werkstunden mit der kostenlosen Bewertung Ihrer Immobilie."
+  },
+  "recruit": {
+    "title": "Werden Sie Teil unseres Teams",
+    "subtitle": "22 Jahre starke Marke in Odivelas. Bauen Sie Ihre Karriere mit der Unterstützung eines Teams auf, das den Markt bereits kennt.",
+    "formName": "Name",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon",
+    "formMessage": "Erzählen Sie uns etwas über sich (optional)",
+    "submit": "Bewerbung senden",
+    "sending": "Wird gesendet...",
+    "responseTime": "Wir antworten innerhalb von 24 bis 48 Werkstunden.",
+    "successTitle": "Bewerbung erhalten!",
+    "successBody": "Danke für Ihr Interesse. Wir melden uns innerhalb von 24 bis 48 Werkstunden, um ein Gespräch zu vereinbaren."
+  },
+  "project": {
+    "instructions": "Tippen Sie auf die markierten Punkte, um mehr Details zu sehen."
+  },
+  "contacteBotao": {
+    "label": "Kontaktieren Sie uns",
+    "whatsapp": "WhatsApp",
+    "phone": "Telefon"
+  },
+  "languageSwitcher": {
+    "label": "Sprache"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Die häufigsten Fragen von Menschen, die bei uns kaufen, verkaufen oder mieten.",
+    "items": [
+      {
+        "question": "Wie lange dauert es, eine Immobilie zu verkaufen oder zu vermieten?",
+        "answer": "Das hängt von der Art der Immobilie, der Lage und dem Angebotspreis ab. Wir verfolgen die Entwicklung Ihrer Immobilie am Markt und passen die Strategie gemeinsam mit Ihnen während des gesamten Prozesses an, gestützt auf 22 Jahre lokale Erfahrung in Odivelas."
+      },
+      {
+        "question": "Kostet die Bewertung meiner Immobilie etwas?",
+        "answer": "Nein. Die Bewertung ist kostenlos und unverbindlich, basierend auf echten Vergleichsobjekten des lokalen Marktes."
+      },
+      {
+        "question": "Welche Unterlagen brauche ich, um meine Immobilie zu verkaufen?",
+        "answer": "In der Regel das Grundbuchblatt, den Katasterauszug, die Nutzungsgenehmigung (falls zutreffend) und den Energieausweis. Ihr Berater hilft Ihnen, alles Notwendige zusammenzustellen."
+      },
+      {
+        "question": "Arbeitet RE/MAX Radial nur in Odivelas?",
+        "answer": "Unser Büro befindet sich in Odivelas, wir betreuen aber auch Immobilien in der Umgebung, mit Zugang zum RE/MAX-Netzwerk auf nationaler und internationaler Ebene."
+      },
+      {
+        "question": "Wie kann ich einen Berater kontaktieren?",
+        "answer": "Über das Kontaktformular, WhatsApp, Telefon oder durch einen Besuch in unserem Büro in der Av. 25 de Abril, Odivelas."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "body": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "cta": "Zurück zur Startseite"
+  },
+  "errors": {
+    "contactRequired": "Bitte Name, E-Mail und Nachricht ausfüllen.",
+    "sellRequired": "Bitte alle Felder ausfüllen.",
+    "recruitRequired": "Bitte Name, E-Mail und Telefon ausfüllen.",
+    "financingRequired": "Bitte Name, E-Mail ausfüllen und die Genehmigung akzeptieren.",
+    "sendFailed": "Senden fehlgeschlagen. Bitte erneut versuchen."
+  }
+}

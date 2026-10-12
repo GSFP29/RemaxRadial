@@ -7,6 +7,8 @@ export {
   formatarPreco,
   urlAnuncioRemax,
   comodidadesImovel,
+  tituloImovel,
+  mensagemWhatsappImovel,
 } from "@/lib/imoveis-formato";
 
 const CAMPOS_PUBLICOS =
@@ -14,7 +16,7 @@ const CAMPOS_PUBLICOS =
 
 export type FiltrosImoveis = {
   tipologia?: string;
-  freguesia?: string;
+  concelho?: string;
   consultor?: string;
 };
 
@@ -30,7 +32,7 @@ export async function listarImoveisPorTipo(
     .eq("tipo", tipo);
 
   if (filtros.tipologia) query = query.eq("tipologia", filtros.tipologia);
-  if (filtros.freguesia) query = query.eq("freguesia", filtros.freguesia);
+  if (filtros.concelho) query = query.eq("concelho", filtros.concelho);
   if (filtros.consultor) {
     query = query.eq("dados_api->>userName", filtros.consultor);
   }
@@ -46,21 +48,21 @@ export async function obterOpcoesFiltro(tipo: TipoNegocio) {
   const supabase = await createClient();
   const { data } = await supabase
     .from("imoveis")
-    .select("tipologia, freguesia, dados_api")
+    .select("tipologia, concelho, dados_api")
     .eq("estado", "ativo")
     .eq("tipo", tipo);
 
   const linhas = (data ?? []) as unknown as Pick<
     ImovelPublico,
-    "tipologia" | "freguesia" | "dados_api"
+    "tipologia" | "concelho" | "dados_api"
   >[];
 
   const tipologias = [
     ...new Set(linhas.map((l) => l.tipologia).filter((v): v is string => !!v)),
   ].sort((a, b) => parseInt(a.replace("T", ""), 10) - parseInt(b.replace("T", ""), 10));
 
-  const freguesias = [
-    ...new Set(linhas.map((l) => l.freguesia).filter((v): v is string => !!v)),
+  const concelhos = [
+    ...new Set(linhas.map((l) => l.concelho).filter((v): v is string => !!v)),
   ].sort((a, b) => a.localeCompare(b, "pt"));
 
   const consultores = [
@@ -69,7 +71,7 @@ export async function obterOpcoesFiltro(tipo: TipoNegocio) {
     ),
   ].sort((a, b) => a.localeCompare(b, "pt"));
 
-  return { tipologias, freguesias, consultores };
+  return { tipologias, concelhos, consultores };
 }
 
 // Referência "5 de Outubro" pedida explicitamente para aparecer sempre

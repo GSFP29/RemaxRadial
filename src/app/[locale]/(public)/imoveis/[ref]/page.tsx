@@ -1,13 +1,45 @@
-import Link from "next/link";
+import type { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import {
   comodidadesImovel,
   formatarPreco,
+  imagemUrl,
   obterImovelPorRef,
   urlAnuncioRemax,
 } from "@/lib/imoveis";
 import { LocalizacaoImovel } from "@/components/localizacao-imovel";
 import { GaleriaFotos } from "@/components/galeria-fotos";
+import { ContactoImovel } from "@/components/contacto-imovel";
+import { SimuladorFinanciamento } from "@/components/simulador-financiamento";
+
+function descricaoImovel(imovel: NonNullable<Awaited<ReturnType<typeof obterImovelPorRef>>>) {
+  return [imovel.tipo_imovel, imovel.tipologia, imovel.freguesia ?? imovel.concelho]
+    .filter(Boolean)
+    .join(" · ");
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ ref: string }>;
+}): Promise<Metadata> {
+  const { ref } = await params;
+  const imovel = await obterImovelPorRef(ref);
+  if (!imovel) return {};
+
+  const titulo = `${descricaoImovel(imovel)} — ${formatarPreco(imovel.preco_pedido)}`;
+  const foto = imovel.dados_api?.listingPictures?.[0];
+
+  return {
+    title: titulo,
+    description: `${titulo} · RE/MAX Radial, agência 12116, Odivelas.`,
+    openGraph: foto
+      ? { images: [{ url: imagemUrl(foto, "l-feat") }] }
+      : undefined,
+  };
+}
 
 export default async function ImovelPage({
   params,
@@ -19,43 +51,33 @@ export default async function ImovelPage({
 
   if (!imovel) notFound();
 
+  const t = await getTranslations("propertyDetail");
+  const tCard = await getTranslations("propertyCard");
   const fotos = imovel.dados_api?.listingPictures ?? [];
-  const consultorNome = imovel.dados_api?.userName;
-  const consultorTelemovel = imovel.dados_api?.userCellPhone;
-  const consultorEmail = imovel.dados_api?.userEmail;
   const comodidades = comodidadesImovel(imovel);
 
   const corSelo = imovel.tipo === "venda" ? "bg-brand-blue" : "bg-brand-red";
 
   const estatisticas = [
-    imovel.quartos !== null && [`${imovel.quartos}`, "Quartos"],
-    imovel.casas_banho !== null && [`${imovel.casas_banho}`, "Casas de banho"],
-    imovel.area_m2 !== null && [`${imovel.area_m2} m²`, "Área total"],
-    imovel.tipo_imovel && [imovel.tipo_imovel, "Tipo de imóvel"],
-  ].filter(Boolean) as [string, string][];
-
-  const detalhes = [
-    imovel.tipologia && ["Tipologia", imovel.tipologia],
-    imovel.ano_construcao && ["Ano de construção", String(imovel.ano_construcao)],
-    imovel.certificado_energetico && [
-      "Certificado energético",
-      imovel.certificado_energetico,
-    ],
+    imovel.quartos !== null && [`${imovel.quartos}`, t("bedrooms")],
+    imovel.casas_banho !== null && [`${imovel.casas_banho}`, t("bathrooms")],
+    imovel.area_m2 !== null && [`${imovel.area_m2} m²`, t("totalArea")],
+    imovel.tipo_imovel && [imovel.tipo_imovel, t("propertyType")],
   ].filter(Boolean) as [string, string][];
 
   return (
     <div className="mx-auto w-full max-w-4xl px-6 py-10">
       <Link href="/imoveis" className="mb-6 inline-block text-sm text-brand-blue">
-        ← Voltar aos imóveis
+        {t("back")}
       </Link>
 
-      <GaleriaFotos fotos={fotos} />
+      <GaleriaFotos fotos={fotos} descricao={descricaoImovel(imovel)} />
 
       <div className="flex items-center gap-2">
         <span
           className={`rounded-full ${corSelo} px-3 py-1 text-xs font-semibold text-white`}
         >
-          {imovel.tipo === "venda" ? "Venda" : "Arrendamento"}
+          {imovel.tipo === "venda" ? tCard("sale") : tCard("rent")}
         </span>
         {imovel.tipo_imovel && (
           <span className="text-sm font-semibold tracking-wide text-foreground-secondary uppercase">
@@ -73,7 +95,7 @@ export default async function ImovelPage({
           rel="noopener noreferrer"
           className="text-sm font-semibold text-brand-blue"
         >
-          Ver anúncio no site RE/MAX →
+          {t("viewOnRemax")}
         </a>
       </div>
       <p className="mt-1 text-foreground-secondary">
@@ -93,21 +115,10 @@ export default async function ImovelPage({
 
       <LocalizacaoImovel imovel={imovel} />
 
-      {detalhes.length > 0 && (
-        <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-grid pt-8 sm:grid-cols-3">
-          {detalhes.map(([rotulo, valor]) => (
-            <div key={rotulo}>
-              <dt className="text-xs text-foreground-secondary">{rotulo}</dt>
-              <dd className="font-medium">{valor}</dd>
-            </div>
-          ))}
-        </dl>
-      )}
-
       {comodidades.length > 0 && (
         <div className="mt-8 border-t border-grid pt-8">
           <h2 className="mb-3 text-sm font-semibold text-foreground-secondary">
-            Comodidades
+            {t("amenities")}
           </h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {comodidades.map((item) => (
@@ -120,26 +131,11 @@ export default async function ImovelPage({
         </div>
       )}
 
-      {consultorNome && (
-        <div className="mt-8 rounded-lg border border-brand-blue/30 bg-brand-blue/[0.03] p-5">
-          <p className="mb-1 text-sm font-semibold text-foreground-secondary">
-            Contactar o Consultor
-          </p>
-          <p className="text-lg font-bold">{consultorNome}</p>
-          <div className="mt-2 flex flex-col gap-1 text-sm sm:flex-row sm:gap-4">
-            {consultorTelemovel && (
-              <a href={`tel:${consultorTelemovel}`} className="font-medium text-brand-blue">
-                {consultorTelemovel}
-              </a>
-            )}
-            {consultorEmail && (
-              <a href={`mailto:${consultorEmail}`} className="font-medium text-brand-blue">
-                {consultorEmail}
-              </a>
-            )}
-          </div>
-        </div>
+      {imovel.tipo === "venda" && (
+        <SimuladorFinanciamento imovelId={imovel.id} precoPedido={imovel.preco_pedido} />
       )}
+
+      <ContactoImovel imovel={imovel} />
     </div>
   );
 }

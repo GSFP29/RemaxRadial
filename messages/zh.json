@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "buy": "购买",
+    "rent": "租赁",
+    "sell": "出售",
+    "contact": "联系我们",
+    "panel": "后台 →"
+  },
+  "footer": {
+    "agency": "12116号代理 · Odivelas",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "rights": "© {ano} RE/MAX Radial · 12116号代理"
+  },
+  "home": {
+    "heroTitle": "22年，为您开启新故事之门",
+    "heroSubtitle": "凭借经验、亲和力与本地专业知识，让每一次搬迁都更简单。",
+    "buy": "购买",
+    "rent": "租赁",
+    "sell": "出售",
+    "statsYears": "年从业经验",
+    "statsForSale": "在售房源",
+    "statsForRent": "在租房源",
+    "featuredTitle": "精选房源",
+    "featuredSubtitle": "为您精心挑选的房源系列。",
+    "viewAll": "查看全部房源 →",
+    "reviewsTitle": "客户的真实好评"
+  },
+  "ctaCards": {
+    "sellTitle": "想出售您的房产吗？",
+    "sellDescription": "免费估价，由本地区最优秀的顾问全程陪同出售。",
+    "joinTitle": "加入我们的团队",
+    "joinDescription": "加入全球最大的房地产网络，开启成功的职业生涯。",
+    "learnMore": "了解更多"
+  },
+  "maxfinance": {
+    "eyebrow": "MaxFinance Delta",
+    "title": "由真正懂行的人为您提供融资服务",
+    "description": "免费月供模拟、提前还款方案，并在整个房屋贷款流程中为您提供支持。",
+    "learnMore": "了解更多"
+  },
+  "listing": {
+    "available_one": "套可选房源",
+    "available_other": "套可选房源",
+    "empty": "没有符合这些筛选条件的房源。"
+  },
+  "filters": {
+    "title": "筛选",
+    "clear": "清除",
+    "typology": "户型",
+    "all": "全部",
+    "zone": "区域",
+    "agent": "负责顾问",
+    "allAgents": "全部",
+    "submit": "筛选"
+  },
+  "pagination": {
+    "nav": "分页",
+    "previous": "上一页",
+    "next": "下一页"
+  },
+  "propertyCard": {
+    "sale": "出售",
+    "rent": "出租",
+    "noPhoto": "暂无照片",
+    "bedrooms": "间卧室",
+    "bathrooms": "间卫生间"
+  },
+  "propertyDetail": {
+    "back": "← 返回房源列表",
+    "viewOnRemax": "在RE/MAX网站查看该房源 →",
+    "bedrooms": "卧室数",
+    "bathrooms": "卫生间数",
+    "totalArea": "总面积",
+    "propertyType": "房产类型",
+    "amenities": "配套设施",
+    "contactAgent": "联系顾问",
+    "contactAgency": "联系代理机构",
+    "talkOnWhatsapp": "通过WhatsApp联系"
+  },
+  "financing": {
+    "cardTitle": "立即进行免费贷款初步评估",
+    "cardSubtitle": "完全免费——30秒内了解预估月供",
+    "cta": "开始模拟 →",
+    "panelTitle": "贷款初步评估",
+    "propertyValue": "房产价值 (€)",
+    "downPayment": "首付款 (€)",
+    "annualRate": "年利率 (%)",
+    "termYears": "贷款年限（年）",
+    "netIncome": "家庭净收入（€/月）——选填",
+    "monthlyPayment": "月供",
+    "financedAmount": "贷款金额",
+    "ltv": "贷款价值比（LTV）",
+    "debtRatio": "负债收入比",
+    "disclaimer": "此为参考性模拟结果（月供、LTV及负债收入比），不包含产权转移税、印花税或公证费用。",
+    "simulateOthers": "前往MaxFinance Delta模拟这些及其他贷款方案",
+    "requestSent": "申请已发送！专属顾问将尽快与您联系。",
+    "formTitle": "我希望获得此模拟结果并与专属顾问沟通",
+    "name": "姓名",
+    "email": "电子邮箱",
+    "phoneOptional": "电话（选填）",
+    "consent": "本人同意 RE/MAX Radial 及 MaxFinance Delta 根据这些信息与我联系。*",
+    "submit": "申请免费评估",
+    "sending": "发送中..."
+  },
+  "contact": {
+    "title": "让我们聊聊您的下一步",
+    "subtitle": "22年深耕Odivelas地区，为买家、卖家及租客提供支持。我们随时为您服务。",
+    "whatsappTitle": "WhatsApp",
+    "whatsappDescription": "直接与我们联系，无需等待。",
+    "whatsappCta": "打开对话",
+    "phoneTitle": "电话",
+    "phoneDescription": "工作时间内提供直接服务。",
+    "officeTitle": "办公室",
+    "officeDescription": "22年深耕同一地区。",
+    "formName": "姓名",
+    "formEmail": "电子邮箱",
+    "formPhone": "电话（选填）",
+    "formMessage": "留言",
+    "submit": "发送留言",
+    "sending": "发送中...",
+    "responseTime": "我们将在24至48个工作小时内回复。",
+    "successTitle": "留言已发送！",
+    "successBody": "感谢您的联系，我们将在24至48个工作小时内回复。"
+  },
+  "sell": {
+    "title": "想出售您的房产吗？",
+    "subtitle": "免费估价，无任何义务。告诉我们基本信息——其余的交给我们。",
+    "formName": "姓名",
+    "formEmail": "电子邮箱",
+    "formPhone": "电话",
+    "formPropertyType": "房产类型",
+    "formChoose": "请选择...",
+    "formDistrict": "地区",
+    "formCounty": "市镇",
+    "formParish": "堂区",
+    "submit": "申请免费估价",
+    "sending": "发送中...",
+    "responseTime": "我们将在24至48个工作小时内回复。",
+    "successTitle": "申请已收到！",
+    "successBody": "感谢您的申请，我们的一位顾问将在24至48个工作小时内与您联系，提供房产的免费估价。"
+  },
+  "recruit": {
+    "title": "加入我们的团队",
+    "subtitle": "22年来在Odivelas地区拥有强大品牌影响力。在一支深谙市场的团队支持下，成就您的职业生涯。",
+    "formName": "姓名",
+    "formEmail": "电子邮箱",
+    "formPhone": "电话",
+    "formMessage": "简单介绍一下您自己（选填）",
+    "submit": "提交申请",
+    "sending": "发送中...",
+    "responseTime": "我们将在24至48个工作小时内回复。",
+    "successTitle": "申请已收到！",
+    "successBody": "感谢您的关注，我们将在24至48个工作小时内与您联系安排面谈。"
+  },
+  "project": {
+    "instructions": "点击标记的位置查看更多细节。"
+  },
+  "contacteBotao": {
+    "label": "联系我们",
+    "whatsapp": "WhatsApp",
+    "phone": "电话"
+  },
+  "languageSwitcher": {
+    "label": "语言"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "与我们买卖或租赁房产时最常见的问题。",
+    "items": [
+      {
+        "question": "出售或出租一套房产通常需要多长时间？",
+        "answer": "这取决于房产类型、位置和要价。我们会持续跟踪您的房产在市场上的表现，并在整个过程中与您一起调整策略——凭借在 Odivelas 22 年的本地经验。"
+      },
+      {
+        "question": "房产估价需要付费吗？",
+        "answer": "不需要。估价完全免费且不附带任何义务，基于当地市场的真实可比房源。"
+      },
+      {
+        "question": "出售房产需要准备哪些文件？",
+        "answer": "通常包括土地登记证明、房产描述证明、使用许可（如适用）和能效证书。您的顾问会协助您准备好所有必需文件。"
+      },
+      {
+        "question": "RE/MAX Radial 只在 Odivelas 开展业务吗？",
+        "answer": "我们的办公室位于 Odivelas，但也负责周边地区的房产业务，并可通过 RE/MAX 网络对接全国及国际资源。"
+      },
+      {
+        "question": "如何联系顾问？",
+        "answer": "可通过联系表单、WhatsApp、电话，或直接到访我们位于 Av. 25 de Abril, Odivelas 的办公室。"
+      }
+    ]
+  },
+  "notFound": {
+    "title": "找不到页面",
+    "body": "您要查找的页面不存在或已被移动。",
+    "cta": "返回首页"
+  },
+  "errors": {
+    "contactRequired": "请填写姓名、电子邮箱和留言内容。",
+    "sellRequired": "请填写所有字段。",
+    "recruitRequired": "请填写姓名、电子邮箱和电话。",
+    "financingRequired": "请填写姓名、电子邮箱并接受授权条款。",
+    "sendFailed": "发送失败，请重试。"
+  }
+}

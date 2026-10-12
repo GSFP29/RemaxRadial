@@ -1,8 +1,10 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { listarImoveisDestaque } from "@/lib/imoveis";
 import { ImovelCard } from "@/components/imovel-card";
 
 export async function PropriedadesDestaque() {
+  const t = await getTranslations("home");
   const imoveis = await listarImoveisDestaque(6);
 
   if (imoveis.length === 0) return null;
@@ -13,17 +15,17 @@ export async function PropriedadesDestaque() {
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl font-bold sm:text-3xl">
-              Propriedades em Destaque
+              {t("featuredTitle")}
             </h2>
             <p className="mt-1 text-foreground-secondary">
-              Uma seleção da nossa carteira, escolhida a pensar em si.
+              {t("featuredSubtitle")}
             </p>
           </div>
           <Link
             href="/comprar"
             className="rounded-full border border-grid px-4 py-2 text-sm font-medium hover:border-brand-blue hover:text-brand-blue"
           >
-            Ver todos os imóveis →
+            {t("viewAll")}
           </Link>
         </div>
 

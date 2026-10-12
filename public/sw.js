@@ -7,7 +7,7 @@
 // Resto (imagens, CSS, JS): stale-while-revalidate — mostra o que
 // estiver em cache instantaneamente, atualiza por trás.
 
-const CACHE_NAME = "radial-v2";
+const CACHE_NAME = "radial-v3";
 
 self.addEventListener("install", () => {
   self.skipWaiting();
@@ -34,7 +34,11 @@ self.addEventListener("fetch", (event) => {
 
   if (event.request.mode === "navigate") {
     event.respondWith(
-      fetch(event.request).catch(async () => {
+      // no-store: nunca deixar a cache HTTP normal do browser devolver um
+      // HTML antigo mesmo dizendo "vai à rede" — foi isto que causou uma
+      // correção publicada a não aparecer para quem já tinha visitado o
+      // site antes da publicação.
+      fetch(event.request, { cache: "no-store" }).catch(async () => {
         const cache = await caches.open(CACHE_NAME);
         return (await cache.match(event.request)) ?? Response.error();
       }),

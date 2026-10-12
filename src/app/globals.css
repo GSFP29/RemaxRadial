@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  /* Modo claro forçado em todo o site — decisão explícita do cliente
-     (Ago 2026): "fica mais profissional". Sem alternativa escura,
-     em nenhuma área da aplicação. Ver docs/decisoes.md. */
+  /* Modo claro por omissão — decisão revista em 22 Ago 2026: agora há
+     opção de modo escuro, mas troca só o fundo/superfícies claras por um
+     tom escuro. Cores de marca e séries de gráfico mantêm-se exatamente
+     iguais nos dois modos. Ver docs/decisoes.md. */
   --background: #ffffff;
   --foreground: #0b0b0b;
   --foreground-secondary: #52514e;
@@ -15,6 +16,15 @@
   --chart-2: #eb6834;
   --chart-3: #1baf7a;
   --chart-4: #eda100;
+}
+
+:root[data-theme="dark"] {
+  --background: #131316;
+  --foreground: #f2f2ef;
+  --foreground-secondary: #a5a49c;
+  --grid: #2c2c31;
+  /* --brand-red, --brand-blue e --chart-1..4 não se repetem aqui de
+     propósito: mantêm-se os valores do modo claro, sem exceção. */
 }
 
 @theme inline {
@@ -35,4 +45,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   color-scheme: light;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+:root[data-theme="dark"] body {
+  color-scheme: dark;
 }

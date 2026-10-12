@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "buy": "Buy",
+    "rent": "Rent",
+    "sell": "Sell",
+    "contact": "Contact us",
+    "panel": "Panel →"
+  },
+  "footer": {
+    "agency": "Agency 12116 · Odivelas",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "rights": "© {ano} RE/MAX Radial · Agency 12116"
+  },
+  "home": {
+    "heroTitle": "22 years opening doors to new stories",
+    "heroSubtitle": "Experience, closeness and local knowledge to make every move simpler.",
+    "buy": "Buy",
+    "rent": "Rent",
+    "sell": "Sell",
+    "statsYears": "years in business",
+    "statsForSale": "properties for sale",
+    "statsForRent": "properties for rent",
+    "featuredTitle": "Featured Properties",
+    "featuredSubtitle": "A selection from our portfolio, chosen with you in mind.",
+    "viewAll": "View all properties →",
+    "reviewsTitle": "Real stories from happy clients"
+  },
+  "ctaCards": {
+    "sellTitle": "Want to sell your property?",
+    "sellDescription": "Free valuation and a sale supported by the best consultants in the area.",
+    "joinTitle": "Join our team",
+    "joinDescription": "Become part of the world's largest real estate network and build a successful career.",
+    "learnMore": "Learn more"
+  },
+  "maxfinance": {
+    "eyebrow": "MaxFinance Delta",
+    "title": "Financing from people who understand the subject",
+    "description": "Free mortgage payment simulation, early repayment scenarios and support throughout the whole home loan process.",
+    "learnMore": "Learn more"
+  },
+  "listing": {
+    "available_one": "property available",
+    "available_other": "properties available",
+    "empty": "No properties match these filters."
+  },
+  "filters": {
+    "title": "Filters",
+    "clear": "Clear",
+    "typology": "Typology",
+    "all": "All",
+    "zone": "Area",
+    "agent": "Consultant",
+    "allAgents": "All",
+    "submit": "Filter"
+  },
+  "pagination": {
+    "nav": "Pagination",
+    "previous": "Previous page",
+    "next": "Next page"
+  },
+  "propertyCard": {
+    "sale": "For sale",
+    "rent": "For rent",
+    "noPhoto": "No photo",
+    "bedrooms": "bedrooms",
+    "bathrooms": "bathrooms"
+  },
+  "propertyDetail": {
+    "back": "← Back to properties",
+    "viewOnRemax": "View listing on RE/MAX →",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "totalArea": "Total area",
+    "propertyType": "Property type",
+    "amenities": "Amenities",
+    "contactAgent": "Contact the Consultant",
+    "contactAgency": "Contact the Agency",
+    "talkOnWhatsapp": "Chat on WhatsApp"
+  },
+  "financing": {
+    "cardTitle": "Get a free financing pre-assessment now",
+    "cardSubtitle": "Completely free — find out your estimated monthly payment in 30 seconds",
+    "cta": "Simulate →",
+    "panelTitle": "Financing pre-assessment",
+    "propertyValue": "Property value (€)",
+    "downPayment": "Down payment (€)",
+    "annualRate": "Annual rate — APR (%)",
+    "termYears": "Term (years)",
+    "netIncome": "Household net income (€/month) — optional",
+    "monthlyPayment": "Monthly payment",
+    "financedAmount": "Financed amount",
+    "ltv": "LTV",
+    "debtRatio": "Debt-to-income ratio",
+    "disclaimer": "Indicative simulation (payment, LTV and debt ratio). Does not include property transfer tax, stamp duty or notary costs.",
+    "simulateOthers": "Simulate these and other loans at MaxFinance Delta",
+    "requestSent": "Request sent! A specialist will be in touch shortly.",
+    "formTitle": "I want to receive this simulation and speak with a specialist",
+    "name": "Name",
+    "email": "Email",
+    "phoneOptional": "Phone (optional)",
+    "consent": "I agree to be contacted by RE/MAX Radial and MaxFinance Delta based on this information. *",
+    "submit": "Request free analysis",
+    "sending": "Sending..."
+  },
+  "contact": {
+    "title": "Let's talk about your next step",
+    "subtitle": "22 years in Odivelas supporting buyers, sellers and tenants. We're here to help.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappDescription": "Chat with us directly, no waiting.",
+    "whatsappCta": "Open chat",
+    "phoneTitle": "Phone",
+    "phoneDescription": "Direct assistance during business hours.",
+    "officeTitle": "Office",
+    "officeDescription": "22 years serving the same area.",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formPhone": "Phone (optional)",
+    "formMessage": "Message",
+    "submit": "Send message",
+    "sending": "Sending...",
+    "responseTime": "We reply within 24 to 48 business hours.",
+    "successTitle": "Message sent!",
+    "successBody": "Thanks for reaching out. We reply within 24 to 48 business hours."
+  },
+  "sell": {
+    "title": "Want to sell your property?",
+    "subtitle": "Free valuation, no obligation. Tell us the essentials — we'll take care of the rest.",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formPropertyType": "Property type",
+    "formChoose": "Choose...",
+    "formDistrict": "District",
+    "formCounty": "Municipality",
+    "formParish": "Parish",
+    "submit": "Request free valuation",
+    "sending": "Sending...",
+    "responseTime": "We reply within 24 to 48 business hours.",
+    "successTitle": "Request received!",
+    "successBody": "Thank you. One of our consultants will contact you within 24 to 48 business hours with your property's free valuation."
+  },
+  "recruit": {
+    "title": "Join our team",
+    "subtitle": "22 years of a strong brand in Odivelas. Build your career with the support of a team that already knows the market.",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formMessage": "Tell us a bit about yourself (optional)",
+    "submit": "Send application",
+    "sending": "Sending...",
+    "responseTime": "We reply within 24 to 48 business hours.",
+    "successTitle": "Application received!",
+    "successBody": "Thanks for your interest. We'll be in touch within 24 to 48 business hours to arrange a conversation."
+  },
+  "project": {
+    "instructions": "Tap the marked points to see more detail."
+  },
+  "contacteBotao": {
+    "label": "Contact us",
+    "whatsapp": "WhatsApp",
+    "phone": "Phone"
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "The most common questions from people buying, selling or renting with us.",
+    "items": [
+      {
+        "question": "How long does it take to sell or rent a property?",
+        "answer": "It depends on the type of property, location and asking price. We track how your property performs in the market and adjust the strategy with you throughout the process, backed by 22 years of local experience in Odivelas."
+      },
+      {
+        "question": "Does the property valuation cost anything?",
+        "answer": "No. The valuation is free and comes with no obligation, based on real comparable properties in the local market."
+      },
+      {
+        "question": "What documents do I need to sell my property?",
+        "answer": "Usually the land registry certificate, property description certificate, occupancy permit (where applicable) and energy certificate. Your consultant helps you gather everything you need."
+      },
+      {
+        "question": "Does RE/MAX Radial only work in Odivelas?",
+        "answer": "Our office is based in Odivelas, but we also handle properties in the surrounding area, with access to the RE/MAX network nationally and internationally."
+      },
+      {
+        "question": "How can I contact a consultant?",
+        "answer": "Through the contact form, WhatsApp, phone, or by visiting our office at Av. 25 de Abril, Odivelas."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or has moved.",
+    "cta": "Back to homepage"
+  },
+  "errors": {
+    "contactRequired": "Fill in your name, email and message.",
+    "sellRequired": "Fill in all fields.",
+    "recruitRequired": "Fill in your name, email and phone.",
+    "financingRequired": "Fill in your name, email and accept the authorisation.",
+    "sendFailed": "We couldn't send this. Please try again."
+  }
+}

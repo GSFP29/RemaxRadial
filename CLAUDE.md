@@ -107,9 +107,9 @@ Leitura que orienta o produto: metade das angariações de venda nunca chega a e
 ## 8. Em aberto — perguntar antes de assumir
 
 - ~~**MAXWORK:**~~ Resolvido 20 Ago 2026 — ver `docs/decisoes.md`.
-- **CASAFARI:** a subscrição é individual, não de agência. Está a decorrer pedido de upgrade e de acesso à Property Data API. **Não construir nada que dependa da CASAFARI** até haver resposta escrita sobre o âmbito da licença.
+- ~~**CASAFARI (subscrição):**~~ Resolvido 31 Ago 2026 — confirmado que a subscrição é a título da empresa (não individual), prática comum na rede (a RE/MAX Vantagem também o faz). Seguro usar para a pesquisa manual dos consultores na ferramenta de Pesquisa de Mercado (secção 9). **Acesso à Property Data API** (uso programático/automatizado) continua por confirmar — não construir integração automatizada sem resposta escrita sobre o âmbito da licença.
 - **Email dos portais:** falta saber se a caixa é Google Workspace ou Microsoft 365 — decide a ferramenta de parsing.
-- **Regras da marca RE/MAX** sobre site próprio e uso das angariações do portal: por confirmar. O cliente preferiu não envolver a RE/MAX por agora.
+- ~~**Regras da marca RE/MAX**~~ Resolvido 31 Ago 2026 — confirmado pelo Gonçalo que não há problema com o site próprio nem com o uso das angariações do portal.
 
 ---
 
@@ -169,6 +169,6 @@ Estes ficheiros são o protótipo do que a aplicação vai substituir. As métri
 - **Idioma:** pt-PT em tudo o que o utilizador vê. Código e nomes de variáveis em inglês.
 - **Moeda:** `Intl.NumberFormat('pt-PT', {style:'currency', currency:'EUR', useGrouping:'always'})`
 - **Cores institucionais:** seguem o color building system da rede RE/MAX — branco como base, vermelho `#c8102e` e azul `#0033a0` como apontamentos (confirmado a partir do logótipo real da agência, Ago 2026). Cores sólidas, não gradientes. Séries de gráficos mantêm-se à parte, por acessibilidade: `#2a78d6`, `#eb6834`, `#1baf7a`, `#eda100` (validadas para daltonismo).
-- **Modo claro forçado, sem exceções** (Ago 2026, decisão do cliente: "fica mais profissional"). **Revoga** a decisão anterior de modo escuro obrigatório — não construir alternativa escura em nenhuma área, incluindo o painel interno.
+- **Modo claro por omissão, com opção de modo escuro** (decisão revista em 22 Ago 2026, revogando a decisão de "modo claro forçado, sem exceções" de Ago 2026). O modo escuro troca **só** o fundo/superfícies claras por um tom escuro — vermelho, azul e as séries de gráfico mantêm-se exatamente os mesmos valores em ambos os modos, nunca ajustados para "combinar" com o escuro. Interruptor manual (não segue o tema do sistema operativo), disponível no site público e no painel.
 - **Datas** em ISO na base de dados, `dd/mm/aaaa` no ecrã.
 - **Nunca** usar localStorage para dados de negócio — só base de dados.
